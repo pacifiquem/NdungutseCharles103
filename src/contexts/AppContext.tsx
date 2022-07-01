@@ -15,7 +15,7 @@ const AppContext = createContext<appContextType>(appContextDefaultValues);
 export const useApp = () => useContext(AppContext);
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(false); 
 
     useEffect(() => {
         const localIsDark = localStorage.getItem('isDark');
