@@ -102,3 +102,92 @@ export const tools = [
     link: "",
   },
 ];
+
+export const skills = [
+    {
+        name: "HTML",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "CSS",
+        value: "90%",
+        color: "primary",
+    },
+
+    {
+        name: "JavaScript",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "React",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "Nodejs",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "PHP",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "MySQL",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "C#",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "Python",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "C++",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "Photoshop",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "Illustrator",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "NextJS",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "TypeScript",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "React Native",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "VueJS",
+        value: "90%",
+        color: "primary",
+    },
+    {
+        name: "Laravel",
+        value: "90%",
+        color: "primary",
+    },
+]
