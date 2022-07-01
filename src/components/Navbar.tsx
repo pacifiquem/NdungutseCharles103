@@ -9,6 +9,8 @@ const Navbar: React.FC = () => {
             <div className="flex items-center text-lg">
                 <a className='ml-4 hover:text-blue-700' href="#home">Home</a>
                 <a className='ml-4 hover:text-blue-700' href="#about">About</a>
+                <a className='ml-4 hover:text-blue-700' href="#about">Fields</a>
+                <a className='ml-4 hover:text-blue-700' href="#about">Skills</a>
                 <a className='ml-4 hover:text-blue-700' href="#contact">Contact</a>
             </div>
         </div>
