@@ -7,9 +7,9 @@ const SideBar: React.FC = () => {
         <img className='aspect-square max-w-full'
              src="/src/images/logo.png" alt="" />
         <div className="flex flex-col items-center px-1 mt-[20vh]">
-            <BiHome className='mt-3 text-3xl p-1 text-white bg-blue-400 rounded-md' />
-            <BiUser className='mt-3 text-3xl p-1 text-white bg-blue-400 rounded-md' />
-            <BiHome className='mt-3 text-3xl p-1 text-white bg-blue-400 rounded-md' />
+            <BiHome className='mt-3 cursor-pointer text-3xl p-1 text-white bg-blue-600 rounded-md' />
+            <BiUser className='mt-3 cursor-pointer text-3xl p-1 text-white bg-blue-600 rounded-md' />
+            <BiHome className='mt-3 cursor-pointer text-3xl p-1 text-white bg-blue-600 rounded-md' />
           </div>     
     </div>
   )

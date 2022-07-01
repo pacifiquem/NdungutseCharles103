@@ -19,9 +19,9 @@ window.onload = function () {
 };
 
   return (
-    <h1>
-      <p
-        className="typewrite"
+    <h1 className='absolute bottom-0'>
+      <p 
+        className="typewrite text-xl"
         data-period="1000"
         data-type='[ "I am software developer", "I am Creative.", "I Like to learn new things", "I Love to Develop." ]'
       >

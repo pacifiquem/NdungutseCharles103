@@ -6,7 +6,7 @@ const boxVariant = {
     visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0, x: 200},
 }
-const Card = () => {
+const Card = ({ability}: any) => {
     const control = useAnimation()
     const [ref, inView] = useInView()
 
@@ -18,12 +18,16 @@ const Card = () => {
   return (
     <motion.div
         ref={ref}
-        className="card mt-[500px] bg-yellow-500 w-[200px] h-[200px]"
+        className="card flex p-2 flex-col mt-[5px] border-[1px] shadow-lg "
         variants={boxVariant}
         initial="hidden"
         animate={control}
         >
-            <h1 className='my-auto mx-auto'>COntent</h1>
+            <img src={ability.image} alt="" />
+            <div className="flex w-full flex-col">
+                <h2>{ability.title}</h2>
+                <p>{ability.description}</p>
+            </div>
         </motion.div>
   )
 }
