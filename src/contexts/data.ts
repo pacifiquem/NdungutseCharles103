@@ -8,7 +8,7 @@ export const Abilities = [
   {
     title: "Web Development",
     description:
-      "The development of the graphical user interface of a website(frontend) and the server side of the website (Backend) through the use of HTML, CSS, PHP, and JavaScript and thier related frameworks and tools (Nodejs, React...etc).</p>",
+      "The development of the graphical user interface of a website(frontend) and the server side of the website (Backend) through the use of HTML, CSS, PHP, and JavaScript and thier related frameworks and tools (Nodejs, React...etc)",
     image:
       "https://www.nepocket.com/assets/front/img/summernote/6117d856452cf.jpeg",
   },
@@ -106,88 +106,93 @@ export const tools = [
 export const skills = [
     {
         name: "HTML",
-        value: "90%",
-        color: "primary",
+        value: "98%",
+        color: "bg-orange-500",
     },
     {
         name: "CSS",
-        value: "90%",
-        color: "primary",
+        value: "97%",
+        color: "bg-violet-600",
     },
 
     {
         name: "JavaScript",
         value: "90%",
-        color: "primary",
+        color: "bg-yellow-500",
     },
     {
         name: "React",
         value: "90%",
-        color: "primary",
+        color: "bg-blue-600",
     },
     {
         name: "Nodejs",
         value: "90%",
-        color: "primary",
+        color: "bg-green-800",
     },
     {
         name: "PHP",
-        value: "90%",
-        color: "primary",
+        value: "85%",
+        color: "bg-blue-600",
     },
     {
         name: "MySQL",
-        value: "90%",
-        color: "primary",
+        value: "85%",
+        color: "bg-blue-600",
     },
     {
         name: "C#",
-        value: "90%",
-        color: "primary",
+        value: "60%",
+        color: "bg-green-700",
     },
     {
         name: "Python",
-        value: "90%",
-        color: "primary",
+        value: "20%",
+        color: "bg-blue-800",
     },
     {
         name: "C++",
-        value: "90%",
-        color: "primary",
+        value: "10%",
+        color: "bg-cyan-700",
+    },
+    {
+      name: "C",
+      value: "70%",
+      color: "bg-blue-700",
     },
     {
         name: "Photoshop",
-        value: "90%",
-        color: "primary",
+        value: "60%",
+        color: "bg-blue-700",
     },
     {
         name: "Illustrator",
-        value: "90%",
-        color: "primary",
+        value: "70%",
+        color: "bg-blue-700",
     },
     {
         name: "NextJS",
-        value: "90%",
-        color: "primary",
+        value: "85%",
+        color: "bg-black",
     },
     {
         name: "TypeScript",
         value: "90%",
-        color: "primary",
+        color: "bg-blue-700",
     },
     {
         name: "React Native",
-        value: "90%",
-        color: "primary",
+        value: "80%",
+        color: "bg-blue-700",
     },
     {
         name: "VueJS",
-        value: "90%",
-        color: "primary",
+        value: "80%",
+        color: "bg-green-700",
     },
     {
         name: "Laravel",
-        value: "90%",
-        color: "primary",
+        value: "70%",
+        color: "bg-red-700",
     },
 ]

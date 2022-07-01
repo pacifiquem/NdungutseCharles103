@@ -5,6 +5,7 @@ import SideBar from './components/SideBar'
 import Navbar from './components/Navbar'
 import Fields from './sections/Fields'
 import Skills from './sections/Skills'
+import Projects from './sections/Projects'
 
 function App() {
 
@@ -13,10 +14,11 @@ function App() {
       <div className="App w-full flex flex-col">
         {/* <SideBar /> */}
           <Navbar />
-        <div className="flex flex-col w-full overflow-x-hidden">
+        <div className="flex flex-col w-full overflow-hidden">
           <Home />
           <Fields />
           <Skills />
+          <Projects />
         </div>
       </div>
     </>

@@ -75,7 +75,8 @@ const Skill = ({skill, data}: any) => {
                  variants={skillVariant}
                  initial="before"
                  animate={control1}
-                 className={`w-[${skill.value}] bg-blue-800 h-full`}>
+                 style={{width: skill.value}}
+                 className={`${skill.color} h-full`}>
                 </motion.div>
             </div>
         </div>
