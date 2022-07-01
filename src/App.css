@@ -4,3 +4,11 @@
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+@media screen and (max-width: 780px) {
+  .home{
+    background-size: 150%;
+    background-position: 60%;
+  }
+}
+  

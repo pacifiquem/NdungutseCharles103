@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      <div className="App w-full ">
-        <Navbar />
+      <div className="App w-full flex flex-col">
         {/* <SideBar /> */}
+          <Navbar />
         <div className="flex flex-col w-full overflow-x-hidden">
           <Home />
           <Fields />
