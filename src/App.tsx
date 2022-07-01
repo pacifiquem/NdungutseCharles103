@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Navbar from './components/Navbar'
+import Home from './sections/Home'
+import SideBar from './components/SideBar'
 
 function App() {
 
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App flex w-full">
+      <SideBar />
+      <Home />
     </div>
   )
 }
