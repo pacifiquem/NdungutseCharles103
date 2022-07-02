@@ -1,14 +1,11 @@
 {
-  "homepage": "https://ndungutsecharles.me/",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^6.3.16",
