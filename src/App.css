@@ -11,4 +11,6 @@
     background-position: 60%;
   }
 }
-  
+.wrap{
+  border-right: 1 px solid blue;
+}

@@ -12,21 +12,19 @@ window.onload = function () {
       new TypeWriter(elements[i], JSON.parse(toRotate), period);
     }
   }
-//   var css = document.createElement("style");
-//   css.type = "text/css";
-//   css.innerHTML = ".typewrite > .wrap { border-right: 0.1em solid #00f;}";
-//   document.body.appendChild(css);
 };
 
   return (
-    <h1 className='absolute bottom-0'>
+    <h1 className='absolute mt-6 flex items-center bottom-0'>
+      <p className=' text-3xl'>I&nbsp;</p>
       <p 
-        className="typewrite text-2xl"
+        className="typewrite text-3xl"
         data-period="1000"
-        data-type='[ "I am software developer", "I am Creative.", "I Like to learn new things", "I Love to Develop." ]'
+        data-type='[" am software developer", " am Creative.", " Like to learn new things", " Love to Develop." ]'
       >
         <span className="wrap"></span>
       </p>
+      <p className='text-[2em] translate-y-[-3px] text-blue-900'>|</p>
     </h1>
   );
 }

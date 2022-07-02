@@ -9,7 +9,7 @@ const Home = () => {
 		<div className="flex relative home h-[70vh] tablet:h-[93vh] justify-center flex-col items-center w-full">
 			<div className="absolute flex top-0 right-0 w-full flex-col
              items-center justify-center h-full bg-slate-200 bg-opacity-75">
-				<div className="relative h-[8vh] flex flex-col items-center">
+				<div className="relative h-[10vh] flex flex-col ">
                     <h2 className="text-4xl font-bold">
 				    	Hi. I'm Ishimwe Ndungutse Charles
 				    </h2>
