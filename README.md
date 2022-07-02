@@ -17,7 +17,7 @@ I am a person who is interested in learning new things and making things as simp
 
 <a href="https://www.linkedin.com/in/ishimwe-ndungutse-charles-079418227/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Yu Shi | LinkedIn" width="21px"/></a>
 <a href="https://www.instagram.com/ndungutse_charles/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
-<a href="ttps://www.facebook.com/ishimwendungutsecharles"><img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" style="color: blue; background: blue; border-radius: 100%"
+<a href="https://www.facebook.com/ishimwendungutsecharles"><img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" style="color: blue; background: blue; border-radius: 100%"
  alt="Yu Shi | Medium" width="21px"/></a>
 </br>
 - 💬 If you have any question/feedback, please do not hesitate to reach out to me!

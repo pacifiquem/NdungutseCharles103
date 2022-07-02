@@ -16,11 +16,11 @@ const Home = () => {
 				    <TypeEffect />
                 </div>
 				<div className="flex mt-2 text-3xl text-blue-600 items-center">
-					<a className="" href=""><FaLinkedin /></a>
+					<a className="https://www.linkedin.com/in/ishimwe-ndungutse-charles-079418227/" href=""><FaLinkedin /></a>
 					{/* <BiEnvelopeOpen /> */}
-					<a className="" href=""><FaGithubSquare className="ml-4" /></a>
-					<a className="" href=""><FaFacebookSquare className="ml-4" /></a>
-					<a className="" href=""><FaInstagramSquare className="ml-4" /></a>
+					<a className="https://github.com/NdungutseCharles103" href=""><FaGithubSquare className="ml-4" /></a>
+					<a className="https://www.facebook.com/ishimwendungutsecharles" href=""><FaFacebookSquare className="ml-4" /></a>
+					<a className="https://www.instagram.com/ndungutse_charles/" href=""><FaInstagramSquare className="ml-4" /></a>
 				</div>
 			</div>
 		</div>
