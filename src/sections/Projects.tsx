@@ -7,7 +7,7 @@ const Projects = () => {
   const [works, setWorks] = useState(Does)
 
   return (
-    <div className='flex mt-11 bg-slate-100 w-full flex-col'>
+    <div className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
       <h2 className="font-bold text-center text-3xl">My Works</h2>
       {works.map((work: any, index: number)=>(
         <Work work={work} key={index} no={index} />

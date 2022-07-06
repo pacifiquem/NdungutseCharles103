@@ -7,8 +7,8 @@ import TypeEffect from "../components/TypefEffect";
 const Home = () => {
 	return (
 		<div className="flex relative home h-[60vh] tablet:h-[93vh] justify-center flex-col items-center w-full">
-			<div className="absolute grid grid-cols-2 top-0 right-0 w-full
-            	 items-center justify-center h-full bg-slate-200 bg-opacity-100">
+			<div className="absolute grid grid-cols-2 top-0 right-0 w-full bg-gradient-to-b from-slate-200
+            	via-slate-200 items-center justify-center h-full to-white bg-opacity-100">
 				<div className="flex aspect-square items-center justify-center">
 					<img className="w-4/5" src="src/images/code.svg" alt="" />
 				</div>

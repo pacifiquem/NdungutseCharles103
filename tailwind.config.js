@@ -9,7 +9,8 @@ module.exports = {
     screens: {
       'phone': '400px',
       'tablet': '640px',
-      'laptop': '1024px',
+      'md': '750px',
+      'laptop': '1100px',
       'desktop': '1280px',
     },
   },
