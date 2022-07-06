@@ -8,10 +8,14 @@ const Projects = () => {
 
   return (
     <div className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
-      <h2 className="font-bold text-center text-3xl">My Works</h2>
+      <h2 className="font-bold text-center text-2xl">My Recent Works</h2>
       {works.map((work: any, index: number)=>(
         <Work work={work} key={index} no={index} />
       ))}
+      <div className="flex items-center justify-center mt-4">
+        <a href='works' className="flex items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300">Show All Works 
+        <p className='text-2xl translate-y-[-0.2em]'>&rarr;</p></a>
+      </div>
     </div>
   )
 }
@@ -43,7 +47,7 @@ const Work = ({no, work}: any) => {
 
   return(
     <div
-     className={`tablet:flex gap-x-8 justify-center mt-11 w-[80%] mx-auto ${no%2===0&&'flex-row-reverse'}`}>
+     className={`tablet:flex border-[1px] border-slate-200 shadow-md p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'flex-row-reverse'}`}>
       <motion.div
         ref={proref}
         variants={no%2===0?imgVariant:textVariant}
@@ -60,6 +64,9 @@ const Work = ({no, work}: any) => {
          className="flex tablet:w-[40%] flex-col">
         <h2 className='text-2xl font-bold'>{work.title}</h2>
         <p>{work.description}</p>
+        <a href='works' className="flex items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
+         justify-center hover:bg-blue-700 duration-300">Visit Now
+        <p className='text-2xl translate-y-[-0.2em]'>&rarr;</p></a>
       </motion.div>
     </div>
   )

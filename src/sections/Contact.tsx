@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiEnvelopeOpen } from 'react-icons/bi'
-import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhone, FaPhoneAlt } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
-            <FaPhone className='text-xl' /> 
+            <FaPhoneAlt className='text-xl' /> 
           </div>
           <p className='ml-4'><a href="tel:+250790077264">+250 790077264</a></p>
         </div>

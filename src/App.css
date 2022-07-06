@@ -1,6 +1,6 @@
 .home{
   background-attachment: fixed;
-  background-image: url('./images/charles.png');
+  /* background-image: url('./images/charles.png'); */
   background-repeat: no-repeat;
   background-size: 100%;
 }

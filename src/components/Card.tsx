@@ -28,7 +28,7 @@ const Card = ({ability}: any) => {
   return (
       <motion.div
         ref={ref}
-        className="card w-1/2 mx-auto min-w-[300px] h-full flex p-2 flex-col  mt-[5px] border-[1px] shadow-lg "
+        className="card w-4/5 mx-auto min-w-[300px] h-full flex p-2 flex-col  mt-[5px] border-[1px] shadow-lg "
         variants={boxVariant}
         initial="hidden"
         animate={control}
