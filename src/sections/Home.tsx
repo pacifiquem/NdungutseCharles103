@@ -1,12 +1,12 @@
 import React from "react";
 import { BiEnvelopeOpen } from "react-icons/bi";
-import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import TypeEffect from "../components/TypefEffect";
 
 const Home: React.FC = () => {
 	return (
 		<div className="flex relative home bg-gradient-to-b from-slate-200 via-slate-200 to-white h-[60vh] laptop:h-[93vh] justify-center flex-col items-center w-full">
-			<div className="absolute  grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b from-slate-200
+			<div className="absolute px-[10%] grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b from-slate-200
             	via-slate-200 items-center justify-center laptop:h-full to-white bg-opacity-100">
 				<div className="flex px-[10%] laptop:px-0 laptop:aspect-square items-center justify-center">
 					<img className="w-4/5" src="src/images/code.svg" alt="" />
@@ -54,6 +54,13 @@ const Home: React.FC = () => {
           				  	<BiEnvelopeOpen className='text-xl' /> 
           					</div>
 						 <p className="ml-4">ndungutsecharles103@gmail</p></a>
+						 <a className="flex items-center mt-5 pl-6" href="tel:+250790077264" target="_blank"
+						   rel="no-referrer">
+							<div className="flex items-center bg-blue-800 rounded-full
+          				 	text-white justify-center p-2">
+          				  	<FaPhoneAlt className='text-xl' /> 
+          					</div>
+						 <p className="ml-4">+250 790077264</p></a>
 					</div>
 				</div>
 			</div>

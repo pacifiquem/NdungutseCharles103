@@ -14,7 +14,7 @@ const Projects = () => {
       ))}
       <div className="flex items-center justify-center mt-4">
         <a href='works' className="flex items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300">Show All Works 
-        <p className='text-2xl translate-y-[-0.2em]'>&rarr;</p></a>
+        <p className='text-2xl ml-2'>&rarr;</p></a>
       </div>
     </div>
   )
@@ -66,7 +66,7 @@ const Work = ({no, work}: any) => {
         <p>{work.description}</p>
         <a href='works' className="flex items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
          justify-center hover:bg-blue-700 duration-300">Visit Now
-        <p className='text-2xl translate-y-[-0.2em]'>&rarr;</p></a>
+        <p className='text-2xl ml-2'>&rarr;</p></a>
       </motion.div>
     </div>
   )
