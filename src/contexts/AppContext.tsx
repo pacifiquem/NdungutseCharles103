@@ -10,12 +10,19 @@ const appContextDefaultValues: appContextType = {
     setIsDark: () => { }
 }
 
+const themes = {
+    dark: {
+        text: ''
+    }
+}
+
 const AppContext = createContext<appContextType>(appContextDefaultValues);
 
 export const useApp = () => useContext(AppContext);
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     const [isDark, setIsDark] = useState(false); 
+    const [themeClass, setThemeClass] = useState()
 
     useEffect(() => {
         const localIsDark = localStorage.getItem('isDark');

@@ -50,6 +50,9 @@ const Contact: React.FC = () => {
           <p className='ml-4'><a href="https://www.facebook.com/ishimwendungutsecharles">NdungutseCharles103</a></p>
         </div>
       </div>
+      <div className="flex items-center">
+        <input type="text" />
+      </div>
     </div>
   )
 }

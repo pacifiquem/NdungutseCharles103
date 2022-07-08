@@ -8,6 +8,7 @@ import Projects from './sections/Projects'
 import { BiArrowToTop } from 'react-icons/bi'
 import { FaArrowUp } from 'react-icons/fa'
 import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
 function App() {
   const [showArr, setShwArr] = useState(false)
@@ -35,6 +36,7 @@ function App() {
           <Projects />
           <Contact />
         </div>
+        <Footer />
         {showArr && <FaArrowUp onClick={goToTop}
         className='fixed bottom-7 cursor-pointer hover:bg-blue-800
         right-7 text-white  bg-blue-900 p-3 text-[2.5em]' />}

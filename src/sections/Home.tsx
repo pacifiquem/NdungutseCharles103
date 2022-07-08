@@ -2,8 +2,11 @@ import React from "react";
 import { BiEnvelopeOpen } from "react-icons/bi";
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import TypeEffect from "../components/TypefEffect";
+import { useApp } from '../contexts/AppContext'
 
 const Home: React.FC = () => {
+	const { isDark } =  useApp()
+
 	return (
 		<div className="flex relative home bg-gradient-to-b from-slate-200 via-slate-200 to-white h-[60vh] laptop:h-[93vh] justify-center flex-col items-center w-full">
 			<div className="absolute px-[10%] grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b from-slate-200

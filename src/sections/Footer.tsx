@@ -2,7 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='w-full flex items-center justify-center'>
+      <p className='text-center text-md'>
+        &copy; 2020 Ndungutse Charles - All rights reserved 
+      </p>
+    </div>
   )
 }
 
