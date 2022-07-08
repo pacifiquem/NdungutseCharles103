@@ -4,7 +4,7 @@
 </p>
 
 <h3 align="center">
-Hi there 👋, I'm <a href="https://ndungutsecharles.vercel.app/" target="_blank" rel="noreferrer">Ishimwe Ndungutse Charles</a> 
+Hi there 👋, I'm <a href="[https://ndungutsecharles.vercel.app/](https://www.ndungutsecharles.me/)" target="_blank" rel="noreferrer">Ishimwe Ndungutse Charles</a> 
 </h3>
 
 <h2 align="center">
