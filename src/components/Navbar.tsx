@@ -17,8 +17,8 @@ const Navbar: React.FC = () => {
                 <a className='ml-4 hover:text-blue-700' href="#about">Fields</a>
                 <a className='ml-4 hover:text-blue-700' href="#about">Skills</a>
                 <a className='ml-4 hover:text-blue-700' href="#contact">Contact</a>
-                <BiSun className='ml-3 cursor-pointer'
-                onClick={()=> setIsDark(!isDark)} />
+                {/* <BiSun className='ml-3 cursor-pointer'
+                onClick={()=> setIsDark(!isDark)} /> */}
             </div>
         </div>
     </div>

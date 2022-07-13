@@ -20,7 +20,8 @@ const themes = {
         bg1: 'from-white via-white to-slate-100',
         textAlt: 'text-white',
         nav: 'bg-stone-100 text-black',
-        bgAlt: 'bg-slate-200'
+        bgAlt: 'bg-slate-200',
+        bgAlt1: 'bg-white',
     },
     dark: {
         text: 'text-white',
@@ -28,7 +29,8 @@ const themes = {
         bg1: 'from-slate-800 via-slate-800 to-slate-800',
         textAlt: 'text-white',
         nav: 'bg-stone-800 text-white',
-        bgAlt: 'bg-stone-800'
+        bgAlt: 'bg-stone-800',
+        bgAlt1: 'bg-black',
     }
 }
 
