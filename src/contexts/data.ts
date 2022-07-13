@@ -10,7 +10,7 @@ export const Abilities = [
     description:
       "The development of the graphical user interface of a website(frontend) and the server side of the website (Backend) through the use of HTML, CSS, PHP, and JavaScript and thier related frameworks and tools (Nodejs, React...etc)",
     image:
-      "https://www.nepocket.com/assets/front/img/summernote/6117d856452cf.jpeg",
+      "https://static.vecteezy.com/system/resources/previews/000/271/024/large_2x/vector-web-development-web-banner.jpg",
   },
   {
     title: "Mobile App Development",
