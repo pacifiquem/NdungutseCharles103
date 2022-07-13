@@ -3,16 +3,18 @@ import { BiEnvelopeOpen } from "react-icons/bi";
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import TypeEffect from "../components/TypefEffect";
 import { useApp } from '../contexts/AppContext'
+import bg from '../images/code.svg'
 
 const Home: React.FC = () => {
-	const { isDark } =  useApp()
+	const { themeClass } =  useApp()
 
 	return (
-		<div className="flex relative home bg-gradient-to-b from-slate-200 via-slate-200 to-white h-[60vh] laptop:h-[93vh] justify-center flex-col items-center w-full">
-			<div className="absolute px-[10%] grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b from-slate-200
-            	via-slate-200 items-center justify-center laptop:h-full to-white bg-opacity-100">
+		<div className={`flex relative home bg-gradient-to-b ${themeClass.bg} h-[60vh] 
+		laptop:h-[93vh] justify-center flex-col items-center w-full`}>
+			<div className={`absolute px-[10%] grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b 
+			${themeClass.bg} items-center justify-center laptop:h-full  bg-opacity-100`}>
 				<div className="flex px-[10%] laptop:px-0 laptop:aspect-square items-center justify-center">
-					<img className="w-4/5" src="src/images/code.svg" alt="" />
+					<img className="w-4/5" src={bg} alt="" />
 				</div>
 				<div className="flex items-center justify-center h-full flex-col laptop:aspect-square">
 					<div className="relative ml-4 laptop:w-full h-[7vh] tablet:h-[10vh] flex flex-col ">

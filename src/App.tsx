@@ -9,9 +9,11 @@ import { BiArrowToTop } from 'react-icons/bi'
 import { FaArrowUp } from 'react-icons/fa'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import { useApp } from './contexts/AppContext'
 
 function App() {
   const [showArr, setShwArr] = useState(false)
+  const { themeClass } = useApp()
 
   window.onscroll = (e)=> {
     if(window.innerHeight/3<window.scrollY){
@@ -27,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className="App w-full flex flex-col">
+      <div className={`App w-full flex flex-col ${themeClass.text} ${themeClass.bgAlt}`}>
           <Navbar />
         <div className="flex flex-col w-full overflow-hidden">
           <Home />

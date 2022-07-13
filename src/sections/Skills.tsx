@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect, useState } from 'react'
 import { BiChevronDownCircle, BiChevronUpCircle } from 'react-icons/bi'
+import { useApp } from '../contexts/AppContext'
 
 const skillVariant = {
     before: { x: -700},
@@ -13,6 +14,7 @@ const Skills = () => {
     const [ref, inView] = useInView()
     const [skilldata, setSkilldata] = useState<any>([])
     const [expanded, setExpanded] = useState(false)
+    const { themeClass } =  useApp()
     const control1 = useAnimation()
 
     useEffect(() => {
@@ -40,7 +42,7 @@ const Skills = () => {
     }, [])
 
   return (
-    <div className=' bg-gradient-to-b from-white via-white to-slate-100 py-4 w-full fllex flex-col'
+    <div className={` bg-gradient-to-b ${themeClass.bg1} py-4 w-full fllex flex-col`}
         ref={ref}>
         <h1 className='text-2xl font-semibold text-center'>Skills</h1>
         <div className="grid max-w-[1200px] mx-auto gap-x-11 mt-6 grid-cols-2 gap-4 px-4">
