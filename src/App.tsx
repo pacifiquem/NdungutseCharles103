@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className={`App w-full flex flex-col ${themeClass.text} ${themeClass.bgAlt}`}>
+      <div className={`App w-full flex flex-col ${themeClass.text}`}>
           <Navbar />
         <div className="flex flex-col w-full overflow-hidden">
           <Home />

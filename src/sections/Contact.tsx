@@ -1,10 +1,13 @@
 import React from 'react'
 import { BiEnvelopeOpen } from 'react-icons/bi'
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhone, FaPhoneAlt } from "react-icons/fa";
+import { useApp } from '../contexts/AppContext';
 
 const Contact: React.FC = () => {
+	const { themeClass } =  useApp()
+
   return (
-    <div className='flex flex-col mt-4 w-4/5 mx-auto'>
+    <div className={`flex flex-col mt-4 w-4/5 mx-auto ${themeClass.bg}`}>
       <h1 className='text-center text-2xl font-bold'>Contact Me</h1>
       <div className="grid laptop:grid-cols-3 w-[280px] mx-auto md:w-full md:grid-cols-2 mt-4 flex-wrap">
         <div className="flex items-center p-3 ">

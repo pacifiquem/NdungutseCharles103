@@ -47,7 +47,8 @@ const Work = ({no, work}: any) => {
 
   return(
     <div
-     className={`tablet:flex border-[1px] border-slate-200 shadow-md p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'flex-row-reverse'}`}>
+     className={`tablet:flex flex flex-col tablet:flex-row border-[1px]
+      border-slate-200 shadow-md p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'tablet:flex-row-reverse'}`}>
       <motion.div
         ref={proref}
         variants={no%2===0?imgVariant:textVariant}
@@ -64,9 +65,10 @@ const Work = ({no, work}: any) => {
          className="flex tablet:w-[40%] flex-col">
         <h2 className='text-2xl font-bold'>{work.title}</h2>
         <p>{work.description}</p>
-        <a href='works' className="flex items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
+        <a href='works' className="flex mx-auto tablet:mx-0 items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
          justify-center hover:bg-blue-700 duration-300">Visit Now
-        <p className='text-2xl ml-2'>&rarr;</p></a>
+        <p className='text-2xl flex items-center ml-2 translate-y-[-0.1em] my-auto'>&rarr;</p>
+        </a>
       </motion.div>
     </div>
   )
