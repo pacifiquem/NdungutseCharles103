@@ -16,7 +16,7 @@ const Home: React.FC = () => {
 				<div className="flex px-[10%] laptop:px-0 laptop:aspect-square items-center justify-center">
 					<img className="w-4/5" src={bg} alt="" />
 				</div>
-				<div className="flex items-center justify-center h-full flex-col laptop:aspect-square">
+				<div className="flex mx-auto items-center justify-center h-full flex-col laptop:aspect-">
 					<div className="relative ml-4 laptop:w-full h-[7vh] tablet:h-[10vh] flex flex-col ">
             	        <h2 className="tablet:text-3xl text-lg font-bold">
 					    	Hi. I'm Ishimwe Ndungutse Charles

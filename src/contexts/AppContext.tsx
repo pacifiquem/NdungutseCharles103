@@ -19,7 +19,7 @@ const themes = {
         bg: 'from-slate-200 via-slate-200 to-white',
         bg1: 'from-white via-white to-slate-100',
         textAlt: 'text-white',
-        nav: 'bg-stone-100 text-black',
+        nav: 'bg-slate-50 text-black',
         bgAlt: 'bg-slate-200',
         bgAlt1: 'bg-white',
     },

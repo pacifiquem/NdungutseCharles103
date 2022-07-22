@@ -8,6 +8,7 @@
   padding: 0;
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Caesar Dressing', cursive; */
-  font-family: 'Mukta', sans-serif;
+  /* font-family: 'Mukta', sans-serif; */
+  font-family: 'Cascadia Code', 'Mukta', sans-serif;
   scroll-behavior: smooth;
 }

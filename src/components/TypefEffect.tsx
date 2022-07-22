@@ -24,7 +24,7 @@ window.onload = function () {
       >
         <span className="wrap"></span>
       </p>
-      <p className='tablet:text-[1.8em] tablet:translate-y-[-3px] text-blue-900'>|</p>
+      <p className='tablet:text-[1.8em] tablet:translate-y-[-3px] text-blue-900'>_</p>
     </h1>
   );
 }
