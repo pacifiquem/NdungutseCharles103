@@ -5,12 +5,16 @@ type appContextType = {
     isDark: boolean;
     setIsDark: (isDark: boolean) => void;
     themeClass: any;
+    mobile: boolean;
+    setMobile: (isDark: boolean) => void;
 }
 
 const appContextDefaultValues: appContextType = {
     isDark: false,
     setIsDark: () => { },
     themeClass: {},
+    mobile: false,
+    setMobile: () => { },
 }
 
 const themes = {
@@ -39,7 +43,8 @@ const AppContext = createContext<appContextType>(appContextDefaultValues);
 export const useApp = () => useContext(AppContext);
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
-    const [isDark, setIsDark] = useState(false); 
+    const [isDark, setIsDark] = useState(false);
+    const [mobile, setMobile] = useState(false) 
     const [themeClass, setThemeClass] = useState(themes.light)
 
 
@@ -74,7 +79,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ isDark, setIsDark, themeClass }}>
+        <AppContext.Provider value={{ isDark, setIsDark, themeClass, mobile, setMobile }}>
             {children}
         </AppContext.Provider>
     );

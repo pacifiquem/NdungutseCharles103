@@ -15,7 +15,7 @@ window.onload = function () {
 };
 
   return (
-    <h1 className='absolute tablet:mt-6 flex items-center bottom-0'>
+    <h1 className='absolute md:ml-0 ml-3 phone:ml-[13%] bottom-[-1em] tablet:mt-6 flex items-center md:bottom-0'>
       <p className=' tablet:text-3xl'>I&nbsp;</p>
       <p 
         className="typewrite tablet:text-2xl"

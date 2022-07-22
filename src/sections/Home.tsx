@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 	const { themeClass } =  useApp()
 
 	return (
-		<div className={`flex relative home bg-gradient-to-b ${themeClass.bg} h-[60vh] 
+		<div id="home" className={`flex relative home bg-gradient-to-b ${themeClass.bg} h-[60vh] 
 		laptop:h-[93vh] justify-center flex-col items-center w-full`}>
 			<div className={`absolute px-[10%] grid laptop:grid-cols-2 top-0 right-0 w-full bg-gradient-to-b 
 			${themeClass.bg} items-center justify-center laptop:h-full  bg-opacity-100`}>
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 				</div>
 				<div className="flex mx-auto items-center justify-center h-full flex-col laptop:aspect-">
 					<div className="relative ml-4 laptop:w-full h-[7vh] tablet:h-[10vh] flex flex-col ">
-            	        <h2 className="tablet:text-3xl text-lg font-bold">
+            	        <h2 className="tablet:text-3xl text-center md:text-start  text-lg font-bold">
 					    	Hi. I'm Ishimwe Ndungutse Charles
 					    </h2>
 					    <TypeEffect />
