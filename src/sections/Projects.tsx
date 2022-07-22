@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { ReactChildren, useEffect, useState } from 'react'
 import { Does } from '../contexts/data'
 import { AnimationControls, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { boxVariant } from '../components/Card'
 
 const Projects = () => {
-  const [works, setWorks] = useState(Does)
+  const [works, setWorks] = useState(Does.reverse())
 
   return (
     <div className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
@@ -36,14 +37,24 @@ const imgVariant = {
 const Work = ({no, work}: any) => {
   const control: AnimationControls = useAnimation()
   const [proref, inView] = useInView()
+  const [imgVar, setImgVar] = useState<any>(imgVariant)
+  const [textVar, setTextVar] = useState<any>(textVariant)
 
   useEffect(()=>{
     if(inView){
       control.start("after");
       console.log("pro")
     }
-
+    if(window.innerWidth < 400){
+      control.start("after");
+      // console.log("in width");
+      // control.start('visible');
+      // control.start('after');
+      // setImgVar(boxVariant);
+      // setTextVar(boxVariant);
+    }
   }, [control, inView])
+
 
   return(
     <div
@@ -51,7 +62,7 @@ const Work = ({no, work}: any) => {
       border-slate-200 shadow-md p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'tablet:flex-row-reverse'}`}>
       <motion.div
         ref={proref}
-        variants={no%2===0?imgVariant:textVariant}
+        variants={no%2===0?imgVar:textVar}
         animate={control}
         initial="before"
        className="tablet:w-[40%] overflow-hidden">
@@ -59,7 +70,7 @@ const Work = ({no, work}: any) => {
       </motion.div>
       <motion.div
         ref={proref}
-        variants={no%2===0?textVariant:imgVariant}
+        variants={no%2===0?textVar:imgVar}
         animate={control}
         initial="before"
          className="flex tablet:w-[40%] flex-col">

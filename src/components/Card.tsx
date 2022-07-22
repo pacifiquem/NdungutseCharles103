@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const boxVariant = {
+export const boxVariant = {
     visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0, x: 0},
 }
 
-const textVariant = {
+export const textVariant = {
     before: {opacity: 0, y: 400, transition: {delay: 1, duration: 0.5}},
     after: {opacity: 1, y: 0}
 }

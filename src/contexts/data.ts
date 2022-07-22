@@ -57,6 +57,14 @@ export const Does = [
     status: "See Progress",
     image: im5
   },
+  {
+    title: "Infinity",
+    link: "https:/infinity1.vercel.app",
+    description:
+      "Gaming site that provides you a more than 600k games. You can view game details, save it your list as well as downloading it for free",
+    status: "See Progress",
+    image: im5
+  },
 ];
 export const tools = [
   {
