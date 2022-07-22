@@ -14,3 +14,23 @@
 .wrap{
   border-right: 1 px solid blue;
 }
+
+/* .in{
+  padding: 0.5em 0;
+}
+.in:focus{
+  padding: 0;
+}
+
+.in:focus ~ .lab{
+  color: rgb(0, 102, 255)!important;
+  top: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  position: static;
+  transform: translateY(0);
+
+}
+.st{
+  position: static!important;
+} */
