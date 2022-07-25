@@ -33,7 +33,7 @@ I am a person who is interested in learning new things and making things as simp
 
 - 📱 React Native
 - Laravel
-- CodeIgniter
+- Java
 - C#
 - 📫 How to reach me: ndungutsecharles103@gmail.com
 
