@@ -153,21 +153,21 @@ export const skills = [
         value: "60%",
         color: "bg-green-700",
     },
-    {
-        name: "Python",
-        value: "20%",
-        color: "bg-blue-800",
-    },
+    // {
+    //     name: "Python",
+    //     value: "20%",
+    //     color: "bg-blue-800",
+    // },
     // {
     //     name: "C++",
     //     value: "10%",
     //     color: "bg-cyan-700",
     // },
-    {
-      name: "Dart",
-      value: "10%",
-      color: "bg-cyan-700",
-  },
+    // {
+    //   name: "Dart",
+    //   value: "10%",
+    //   color: "bg-cyan-700",
+    // },
     {
       name: "C",
       value: "70%",
