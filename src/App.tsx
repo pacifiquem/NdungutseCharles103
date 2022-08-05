@@ -12,14 +12,14 @@ import Footer from './sections/Footer'
 import { useApp } from './contexts/AppContext'
 
 function App() {
-  const [showArr, setShwArr] = useState(false)
+  const [showArr, setShowArr] = useState(false)
   const { themeClass } = useApp()
 
   window.onscroll = (e)=> {
     if(window.innerHeight/3<window.scrollY){
-      setShwArr(true)
+      setShowArr(true)
     }else{
-      setShwArr(false)
+      setShowArr(false)
     }
   }
 
