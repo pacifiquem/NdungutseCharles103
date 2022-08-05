@@ -49,7 +49,7 @@ I am a person who is interested in learning new things and making things as simp
 ![](https://img.shields.io/badge/Code-Nextjs-informational?style=flat&logo=next.js&color=09F)
 ![](https://img.shields.io/badge/Code-Laravel-informational?style=flat&logo=laravel&color=F00)
 
-</br
+</br>
 
 ![](https://img.shields.io/badge/Style-Bootstrap-informational?style=flat&logo=Bootstrap&color=7952B3)
 ![](https://img.shields.io/badge/Style-CSS3-informational?style=flat&logo=CSS3&color=1572B6)
