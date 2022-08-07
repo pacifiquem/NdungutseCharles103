@@ -22,42 +22,48 @@ const Contact: React.FC = () => {
            text-white justify-center p-2">
             <BiEnvelopeOpen className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="mailto:ndungutsecharles103@gmail.com">ndungutsecharles103@gmail.com</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="mailto:ndungutsecharles103@gmail.com">ndungutsecharles103@gmail.com</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
             <FaLinkedin className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="https://www.linkedin.com/in/ishimwe-ndungutse-charles-079418227/">Ishimwe Ndungutse Charles</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="https://www.linkedin.com/in/ishimwe-ndungutse-charles-079418227/">Ishimwe Ndungutse Charles</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
             <FaPhoneAlt className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="tel:+250790077264">+250 790077264</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="tel:+250790077264">+250 790077264</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
             <FaInstagramSquare className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="https://www.instagram.com/ndungutse_charles/">ndungutse_charles</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="https://www.instagram.com/ndungutse_charles/">ndungutse_charles</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
             <FaGithubSquare className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="https://github.com/NdungutseCharles103" className=''>ndungutsecharles103@gmail.com</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="https://github.com/NdungutseCharles103" className=''>ndungutsecharles103@gmail.com</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full
            text-white justify-center p-2">
             <FaFacebookSquare className='text-xl' /> 
           </div>
-          <p className='ml-4'><a href="https://www.facebook.com/ishimwendungutsecharles">NdungutseCharles103</a></p>
+          <p className='ml-4'><a target="_blank" rel="noreferrer"
+           href="https://www.facebook.com/ishimwendungutsecharles">NdungutseCharles103</a></p>
         </div>
       </div>
       <div className="flex flex-col w-full max-w-[700px]  mx-auto items-center">

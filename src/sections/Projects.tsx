@@ -76,7 +76,8 @@ const Work = ({no, work}: any) => {
          className="flex tablet:w-[40%] flex-col">
         <h2 className='text-2xl font-bold'>{work.title}</h2>
         <p>{work.description}</p>
-        <a href='works' className="flex mx-auto tablet:mx-0 items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
+        <a href={work.link} target="_blank" rel='noreferrer' 
+         className="flex mx-auto tablet:mx-0 items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
          justify-center hover:bg-blue-700 duration-300">Visit Now
         <p className='text-2xl flex items-center ml-2 my-auto'>&rarr;</p>
         </a>

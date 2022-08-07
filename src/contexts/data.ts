@@ -38,7 +38,7 @@ export const Does = [
     link: "https://gettech.netlify.app/",
     description:
       "Static web describing the platform where one can get technological products and updates",
-    status: "Explore Now",
+    status: "Visit Now",
     image: im3
   },
   {
