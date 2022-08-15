@@ -45,7 +45,7 @@ const Card = ({ability}: any) => {
                  initial="before"
                  animate={control}
                 >
-                    <p>{ability.description}</p>
+                    <p className='text-lg'>{ability.description}</p>
                 </motion.div>
             </div>
         </div>

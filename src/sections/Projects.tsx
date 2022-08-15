@@ -8,7 +8,7 @@ const Projects = () => {
   const [works, setWorks] = useState(Does.reverse())
 
   return (
-    <div className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
+    <div id='projects' className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
       <h2 className="font-bold text-center text-2xl">My Recent Works</h2>
       {works.map((work: any, index: number)=>(
         <Work work={work} key={index} no={index} />
@@ -24,12 +24,12 @@ const Projects = () => {
 export default Projects
 
 const textVariant = {
-  before: {opacity: 0, x: -400, transition: {duration: 3}},
+  before: {opacity: 0, x: -40, transition: {duration: 3}},
   after: {opacity: 1, x: 0}
 }
 
 const imgVariant = {
-  before: {opacity: 0, x: 400, transition: {duration: 3}},
+  before: {opacity: 0, x: 40, transition: {duration: 3}},
   after: {opacity: 1, x: 0}
 }
 
@@ -44,15 +44,19 @@ const Work = ({no, work}: any) => {
     if(inView){
       control.start("after");
       console.log("pro")
-    }
-    if(window.innerWidth < 400){
-      control.start("after");
-      // console.log("in width");
-      // control.start('visible');
-      // control.start('after');
-      // setImgVar(boxVariant);
-      // setTextVar(boxVariant);
-    }
+    // if(window.innerWidth < 400){
+    //   setImgVar({...imgVariant, before: {...imgVariant.before, x: -50}})
+    //   setTextVar({...textVariant, before: {...textVariant.before, x: 50}})
+    //   control.start("after");
+    //   console.log("400");
+      
+    //   // console.log("in width");
+    //   // control.start('visible');
+    //   // control.start('after');
+    //   // setImgVar(boxVariant);
+    //   // setTextVar(boxVariant);
+    // }
+  }
   }, [control, inView])
 
 
@@ -75,7 +79,7 @@ const Work = ({no, work}: any) => {
         initial="before"
          className="flex tablet:w-[40%] flex-col">
         <h2 className='text-2xl font-bold'>{work.title}</h2>
-        <p>{work.description}</p>
+        <p className='text-lg'>{work.description}</p>
         <a href={work.link} target="_blank" rel='noreferrer' 
          className="flex mx-auto tablet:mx-0 items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
          justify-center hover:bg-blue-700 duration-300">Visit Now

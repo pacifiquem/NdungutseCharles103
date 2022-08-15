@@ -30,14 +30,14 @@ const Home: React.FC = () => {
           				 text-white justify-center p-2">
           				  <FaLinkedin className='text-xl' /> 
           				</div>
-						<p className="ml-4">Ishimwe Ndungutse Charles</p></a>
+						<p className="ml-4 text-lg">Ishimwe Ndungutse Charles</p></a>
 						<a className="flex items-center mt-5 pl-6" href="https://github.com/NdungutseCharles103" target="_blank"
 						 rel="no-referrer">
 							<div className="flex items-center bg-blue-800 rounded-full
           				 text-white justify-center p-2">
           				  	<FaGithubSquare className='text-xl' /> 
           					</div>
-						 <p className="ml-4">Ndungutse Charles103</p></a>
+						 <p className="ml-4 text-lg">Ndungutse Charles103</p></a>
 						<a className="flex items-center mt-5 pl-6" href="https://www.facebook.com/ishimwendungutsecharles" target="_blank"
 						 rel="no-referrer">
 							<div className="flex items-center bg-blue-800 rounded-full
@@ -51,21 +51,21 @@ const Home: React.FC = () => {
           				 	text-white justify-center p-2">
           				  	<FaInstagramSquare className='text-xl' /> 
           					</div>
-						 <p className="ml-4">ndungutse_charles</p></a>
+						 <p className="ml-4 text-lg">ndungutse_charles</p></a>
 						 <a className="flex items-center mt-5 pl-6" href="mailto:ndungutsecharles103@gmail.com" target="_blank"
 						   rel="no-referrer">
 							<div className="flex items-center bg-blue-800 rounded-full
           				 	text-white justify-center p-2">
           				  	<BiEnvelopeOpen className='text-xl' /> 
           					</div>
-						 <p className="ml-4">ndungutsecharles103@gmail</p></a>
+						 <p className="ml-4 text-lg">ndungutsecharles103@gmail</p></a>
 						 <a className="flex items-center mt-5 pl-6" href="tel:+250790077264" target="_blank"
 						   rel="no-referrer">
 							<div className="flex items-center bg-blue-800 rounded-full
           				 	text-white justify-center p-2">
           				  	<FaPhoneAlt className='text-xl' /> 
           					</div>
-						 <p className="ml-4">+250 790077264</p></a>
+						 <p className="ml-4 text-lg">+250 790077264</p></a>
 					</div>
 				</div>
 			</div>

@@ -26,10 +26,11 @@ const Navbar: React.FC = () => {
              className={`tablet:static z-50 flex flex-col duration-300
                 tablet:flex-row items-center text-lg absolute ${mobile?`right-0 flex top-[3em] min-w-[200px] max-w-full w-[300px] ${themeClass.nav}`: ' right-[-500px] hidde'}`}>
                 <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#home">Home</a>
-                <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#about">About</a>
-                <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#about">Fields</a>
-                <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#about">Skills</a>
-                <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#contact">Contact</a>
+                {/* <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#about">About</a> */}
+                <a onClick={()=> setMobile(false)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#fields">Fields</a>
+                <a onClick={()=> setMobile(false)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#skills">Skills</a>
+                <a onClick={()=> setMobile(false)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#projects">Projects</a>
+                <a onClick={()=> setMobile(false)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#contact">Contact</a>
                 {/* <BiSun className='ml-3 cursor-pointer'
                 onClick={()=> setIsDark(!isDark)} /> */}
             </div>
