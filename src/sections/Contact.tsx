@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 const Contact: React.FC = () => {
   const form = useRef();
 	const { themeClass } =  useApp()
-  const [data, setData] = useState({
+  const [data, setData] = useState<any>({
     name: '', email: '', title: '', message: ''
   })
   const [warn, setWarn] = useState(false)
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
         reply_to: data.email
         }, import.meta.env.VITE_PUB_KEY);
         console.log(res);
-        
+      setData({})
       setWarn(false)
       setSuccess(true)
       }else{
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
             <FaGithubSquare className='text-xl' /> 
           </div>
           <p className='ml-4'><a target="_blank" rel="noreferrer"
-           href="https://github.com/NdungutseCharles103" className=''>ndungutsecharles103@gmail.com</a></p>
+           href="https://github.com/NdungutseCharles103" className=''>ndungutsecharles103</a></p>
         </div>
         <div className="flex items-center p-3 ">
           <div className="flex items-center bg-blue-800 rounded-full

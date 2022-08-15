@@ -3,6 +3,8 @@ import im2 from "../images/game dvep.jpg";
 import im3 from "../images/gettech.png";
 import im4 from "../images/hitech.png";
 import im5 from "../images/photorect.png";
+import im6 from "../images/allfoot.png";
+import im7 from "../images/movies.png";
 
 export const Abilities = [
   {
@@ -37,7 +39,7 @@ export const Does = [
     title: "GetTech (static web)",
     link: "https://gettech.netlify.app/",
     description:
-      "Static web describing the platform where one can get technological products and updates",
+      "My first web describing the platform where one can get technological products and updates",
     status: "Visit Now",
     image: im3
   },
@@ -58,12 +60,26 @@ export const Does = [
     image: im5
   },
   {
+    title: 'Movies250',
+    link: 'https://movies250.vercel.app/',
+    description:'A movie site that provides you the latest news and updates of the movie world',
+    status:'See Progress',
+    image: im7
+  },
+  {
     title: "Infinity",
     link: "https:/infinity1.vercel.app",
     description:
       "Gaming site that provides you a more than 600k games. You can view game details, save it your list as well as downloading it for free",
     status: "See Progress",
     image: im5
+  },
+  {
+    title: 'All Football',
+    link: 'https://allfootball.vercel.app/',
+    description:'A football site that provides you the latest news and updates of the football world',
+    status:'See Progress',
+    image: im6
   },
 ];
 export const tools = [

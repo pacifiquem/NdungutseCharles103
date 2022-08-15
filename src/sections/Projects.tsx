@@ -5,14 +5,21 @@ import { useInView } from 'react-intersection-observer'
 import { boxVariant } from '../components/Card'
 
 const Projects = () => {
-  const [works, setWorks] = useState(Does.reverse())
+  const [works, setWorks] = useState<any>([])
+
+  useEffect(() => {
+    const works = Does.reverse()
+    setWorks(works.slice(0, 4))
+  }, [])
 
   return (
     <div id='projects' className='flex pt-11 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col'>
       <h2 className="font-bold text-center text-2xl">My Recent Works</h2>
+      <div className="xtab:flex flex-col grid tablet:grid-cols-2 w-full">
       {works.map((work: any, index: number)=>(
         <Work work={work} key={index} no={index} />
       ))}
+      </div>
       <div className="flex items-center justify-center mt-4">
         <a href='works' className="flex items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300">Show All Works 
         <p className='text-2xl ml-2'>&rarr;</p></a>
@@ -44,32 +51,20 @@ const Work = ({no, work}: any) => {
     if(inView){
       control.start("after");
       console.log("pro")
-    // if(window.innerWidth < 400){
-    //   setImgVar({...imgVariant, before: {...imgVariant.before, x: -50}})
-    //   setTextVar({...textVariant, before: {...textVariant.before, x: 50}})
-    //   control.start("after");
-    //   console.log("400");
-      
-    //   // console.log("in width");
-    //   // control.start('visible');
-    //   // control.start('after');
-    //   // setImgVar(boxVariant);
-    //   // setTextVar(boxVariant);
-    // }
   }
   }, [control, inView])
 
 
   return(
     <div
-     className={`tablet:flex flex flex-col tablet:flex-row border-[1px]
-      border-slate-200 shadow-md p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'tablet:flex-row-reverse'}`}>
+     className={` flex flex-col xtab:flex-row border-[1px]
+      border-slate-200 shadow-md items-center p-[4%] gap-x-8 justify-center mt-[10vh] w-[80%] mx-auto ${no%2===0&&'xtab:flex-row-reverse'}`}>
       <motion.div
         ref={proref}
         variants={no%2===0?imgVar:textVar}
         animate={control}
         initial="before"
-       className="tablet:w-[40%] overflow-hidden">
+       className="xtab:w-[40%] overflow-hidden">
         <img src={work.image} alt="" />
       </motion.div>
       <motion.div
@@ -77,11 +72,11 @@ const Work = ({no, work}: any) => {
         variants={no%2===0?textVar:imgVar}
         animate={control}
         initial="before"
-         className="flex tablet:w-[40%] flex-col">
-        <h2 className='text-2xl font-bold'>{work.title}</h2>
-        <p className='text-lg'>{work.description}</p>
+         className="flex items-center xtab:items-start mt-2 xtab:mt-0 xtab:w-[50%] flex-col">
+        <h2 className='tablet:text-2xl text-xl font-bold'>{work.title}</h2>
+        <p className='tablet:text-lg'>{work.description}</p>
         <a href={work.link} target="_blank" rel='noreferrer' 
-         className="flex mx-auto tablet:mx-0 items-center w-[160px] mt-[4vh] text-white px-3 py-1 bg-blue-800
+         className="flex mx-auto xtab:mx-0 items-center w-[160px] mt-4 xtab:mt-[4vh] text-white px-3 py-1 bg-blue-800
          justify-center hover:bg-blue-700 duration-300">Visit Now
         <p className='text-2xl flex items-center ml-2 my-auto'>&rarr;</p>
         </a>
