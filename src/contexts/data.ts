@@ -77,7 +77,7 @@ export const Does = [
   {
     title: 'All Football',
     link: 'https://allfootball.vercel.app/',
-    description:'A football site that provides you the latest news and updates of the football world',
+    description:'get the latest football matches, football teams information, player details and leagues',
     status:'See Progress',
     image: im6
   },
