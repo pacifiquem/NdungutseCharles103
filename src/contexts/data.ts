@@ -5,6 +5,7 @@ import im4 from "../images/hitech.png";
 import im5 from "../images/photorect.png";
 import im6 from "../images/allfoot.png";
 import im7 from "../images/movies.png";
+import im8 from "../images/infinity.png";
 
 export const Abilities = [
   {
@@ -34,7 +35,7 @@ export const Abilities = [
   },
 ];
 
-export const Does = [
+const OlDoes = [
   {
     title: "GetTech (static web)",
     link: "https://gettech.netlify.app/",
@@ -72,7 +73,7 @@ export const Does = [
     description:
       "Gaming site that provides you a more than 600k games. You can view game details, save it your list as well as downloading it for free",
     status: "See Progress",
-    image: im5
+    image: im8
   },
   {
     title: 'All Football',
@@ -82,6 +83,7 @@ export const Does = [
     image: im6
   },
 ];
+export const Does = OlDoes.reverse()
 export const tools = [
   {
     image:
@@ -147,7 +149,7 @@ export const skills = [
     {
         name: "React",
         value: "90%",
-        color: "bg-blue-600",
+        color: "bg-sky-500",
     },
     {
         name: "Nodejs",
@@ -197,7 +199,7 @@ export const skills = [
     {
         name: "Illustrator",
         value: "70%",
-        color: "bg-blue-700",
+        color: "bg-[#ff8c10]",
     },
     {
         name: "NextJS",

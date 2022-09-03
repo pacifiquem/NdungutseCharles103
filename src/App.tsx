@@ -11,6 +11,7 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import { useApp } from './contexts/AppContext'
 
+
 function App() {
   const [showArr, setShowArr] = useState(false)
   const { themeClass } = useApp()

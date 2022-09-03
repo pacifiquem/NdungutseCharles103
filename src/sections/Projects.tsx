@@ -8,8 +8,10 @@ const Projects = () => {
   const [works, setWorks] = useState<any>([])
 
   useEffect(() => {
-    const works = Does.reverse()
-    setWorks(works.slice(0, 4))
+    const newworks = Does.reverse()
+    console.log(Does);
+    console.log(newworks);
+    setWorks(Does.slice(0, 4))
   }, [])
 
   return (

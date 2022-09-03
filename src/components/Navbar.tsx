@@ -15,16 +15,16 @@ const Navbar: React.FC = () => {
           <div  onClick={()=> setMobile(false)}
            className='absolute top-0 left-0 w-full h-screen z-[3]'></div>
         )}
-        <div className="w-full z-[5] relative py-2 flex items-center h-full max-w-[1000px] px-5 tablet:px-[10%]  desktop:px-[10%] justify-between">
-          <div onClick={mobile && mobileHan} className="w-full relative py-2 flex items-center h-full max-w-[1000px] px-5 tablet:px-[10%]  desktop:px-[10%] justify-between">
-            <a onClick={()=> setMobile(false)} className='aspect-square max-h-full z-10' href="#home"><img className='aspect-square max-h-full'
+        <div className="w-full z-[5] relative py-2 flex items-center h-full max-w-[1000px] tablet:px-[10%]  desktop:px-[10%] justify-between">
+          <div onClick={mobile ?mobileHan:()=>{}} className="w-full relative py-2 flex items-center h-full max-w-[1000px] px-5 tablet:px-[10%]  desktop:px-[10%] justify-between">
+            <a onClick={()=> setMobile(false)} className='aspect-square min-w-[50px] max-h-full z-10' href="#home"><img className='aspect-square max-h-full'
              src={logo} alt="charles" /></a>
              <BiMenu onClick={()=> setMobile(!mobile)}
               className='tablet:hidden z-10 block text-3xl cursor-pointer' />
           </div>
             <div
              className={`tablet:static z-50 flex flex-col duration-300
-                tablet:flex-row items-center text-lg absolute ${mobile?`right-0 flex top-[3em] min-w-[200px] max-w-full w-[300px] ${themeClass.nav}`: ' right-[-500px] hidde'}`}>
+                tablet:flex-row items-center text-lg absolute ${mobile?`right-0 flex top-[3em] min-w-[200px] max-w-full w-full ${themeClass.nav}`: ' right-[-500px] hidde'}`}>
                 <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#home">Home</a>
                 {/* <a onClick={()=> setMobile(!mobile)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#about">About</a> */}
                 <a onClick={()=> setMobile(false)} className='tablet:ml-4 p-2 hover:text-blue-700' href="#fields">Fields</a>
