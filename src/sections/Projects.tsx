@@ -6,7 +6,7 @@ import WorkSlider from '../components/WorkSlider'
 
 const Projects = () => {
   const [works, setWorks] = useState<any>([])
-  const [allShown, setAllShown] = useState<boolean>(true)
+  const [allShown, setAllShown] = useState<boolean>(false)
 
   useEffect(() => {
     setWorks(Does.slice(0, 4))
