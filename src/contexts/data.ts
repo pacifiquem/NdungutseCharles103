@@ -35,28 +35,27 @@ export const Abilities = [
   },
 ];
 
-const OlDoes = [
+export const Does = [
   {
-    title: "GetTech (static web)",
-    link: "https://gettech.netlify.app/",
-    description:
-      "My first web describing the platform where one can get technological products and updates",
-    status: "Visit Now",
-    image: im3
+    title: 'All Football',
+    link: 'https://allfootball.vercel.app/',
+    description:'get the latest football matches, football teams information, player details and leagues',
+    status:'See Progress',
+    image: im6
   },
   {
-    title: "HiTech",
-    link: "https://hitech1.vercel.app/",
+    title: "Infinity",
+    link: "https:/infinity1.vercel.app",
     description:
-      "Introducing a reliable way of purchasing technological products wherever you are. Get new updates of the products and buy them at low prices",
+    "Gaming site that provides you a more than 600k games. You can view game details, save it your list as well as downloading it for free",
     status: "See Progress",
-    image: im4
+    image: im8
   },
   {
-    title: "Photo Carner",
+    title: "Photo Corner",
     link: "https://photo-rect-v.vercel.app",
     description:
-      "Simple photographer's site where they can share there works and connect to other photographers. Just for fun",
+    "Simple photographer's site where they can share there works and connect to other photographers. Just for fun",
     status: "See Progress",
     image: im5
   },
@@ -68,22 +67,22 @@ const OlDoes = [
     image: im7
   },
   {
-    title: "Infinity",
-    link: "https:/infinity1.vercel.app",
+    title: "HiTech",
+    link: "https://hitech1.vercel.app/",
     description:
-      "Gaming site that provides you a more than 600k games. You can view game details, save it your list as well as downloading it for free",
-    status: "See Progress",
-    image: im8
+      "Introducing a reliable way of purchasing technological products wherever you are. Get new updates of the products and buy them at low prices",
+      status: "See Progress",
+    image: im4
   },
   {
-    title: 'All Football',
-    link: 'https://allfootball.vercel.app/',
-    description:'get the latest football matches, football teams information, player details and leagues',
-    status:'See Progress',
-    image: im6
+    title: "GetTech (static web)",
+    link: "https://gettech.netlify.app/",
+    description:
+      "My first web describing the platform where one can get technological products and updates",
+    status: "Visit Now",
+    image: im3
   },
 ];
-export const Does = OlDoes.reverse()
 export const tools = [
   {
     image:

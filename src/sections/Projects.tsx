@@ -2,15 +2,13 @@ import React, { ReactChildren, useEffect, useState } from 'react'
 import { Does } from '../contexts/data'
 import { AnimationControls, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { boxVariant } from '../components/Card'
+import WorkSlider from '../components/WorkSlider'
 
 const Projects = () => {
   const [works, setWorks] = useState<any>([])
+  const [allShown, setAllShown] = useState<boolean>(true)
 
   useEffect(() => {
-    const newworks = Does.reverse()
-    console.log(Does);
-    console.log(newworks);
     setWorks(Does.slice(0, 4))
   }, [])
 
@@ -23,9 +21,10 @@ const Projects = () => {
       ))}
       </div>
       <div className="flex items-center justify-center mt-4">
-        <a href='works' className="flex items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300">Show All Works 
-        <p className='text-2xl ml-2'>&rarr;</p></a>
+        <p onClick={()=> setAllShown(true)} className="flex cursor-pointer items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300">Show All Works 
+        <p className='text-2xl ml-2'>&rarr;</p></p>
       </div>
+      {allShown && <WorkSlider works={works} />}
     </div>
   )
 }
