@@ -167,7 +167,7 @@ export const skills = [
     },
     {
         name: "C#",
-        value: "60%",
+        value: "70%",
         color: "bg-green-700",
     },
     // {
@@ -180,11 +180,26 @@ export const skills = [
     //     value: "10%",
     //     color: "bg-cyan-700",
     // },
-    // {
-    //   name: "Dart",
-    //   value: "10%",
-    //   color: "bg-cyan-700",
-    // },
+    {
+        name: "NestJs",
+        value: "80%",
+        color: "bg-red-700",
+    },
+    {
+      name: "Tailwind",
+      value: "95%",
+      color: "bg-sky-700",
+    },
+    {
+      name: ".NET",
+      value: "70%",
+      color: "bg-blue-700",
+    },
+    {
+      name: "Dart",
+      value: "50%",
+      color: "bg-cyan-700",
+    },
     {
       name: "C",
       value: "70%",
@@ -212,7 +227,7 @@ export const skills = [
     },
     {
         name: "React Native",
-        value: "80%",
+        value: "85%",
         color: "bg-blue-700",
     },
     {
