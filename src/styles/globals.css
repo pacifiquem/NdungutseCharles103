@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Rokkitt', serif;
+    /* font-family: 'Oxanium', cursive; */
+    scroll-behavior: smooth;
+}
+
+.home {
+    background-attachment: fixed;
+    /* background-image: url('./images/charles.png'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 780px) {
+    .home {
+        background-size: 150%;
+        background-position: 60%;
+    }
+}
+
+.wrap {
+    border-right: 1 px solid blue;
+}
+/* .navlink{
+    background-color: aliceblue;
+} */
+
+.navlink::after{
+    position: absolute;
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #0667ef;
+    transition: all 0.3s;
+    width: 0;
+}
+
+.navlink:hover:after{
+    width: 100%;
+}
+
+.btnstarted::after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #156fcf, #0667ef);
+    transition: all 0.35s;
+    z-index: 0;
+}
+
+.btnstarted:hover {
+    color: white;
+}
+
+.btnstarted:hover:after {
+    width: 100%;
+}

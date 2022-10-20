@@ -1,11 +1,11 @@
-import im1 from "../images/mobile devep.jpg";
-import im2 from "../images/game dvep.jpg";
-import im3 from "../images/gettech.png";
-import im4 from "../images/hitech.png";
-import im5 from "../images/photorect.png";
-import im6 from "../images/allfoot.png";
-import im7 from "../images/movies.png";
-import im8 from "../images/infinity.png";
+const im1 ="/images/mobile devep.jpg";
+const im2 ="/images/game dvep.jpg";
+const im3 ="/images/gettech.png";
+const im4 ="/images/hitech.png";
+const im5 ="/images/photorect.png";
+const im6 ="/images/allfoot.png";
+const im7 ="/images/movies.png";
+const im8 ="/images/infinity.png";
 
 export const Abilities = [
   {

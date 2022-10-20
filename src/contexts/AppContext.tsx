@@ -1,4 +1,3 @@
-import { TheatersSharp } from "@mui/icons-material";
 import { useContext, useState, useEffect, createContext } from "react";
 
 type appContextType = {

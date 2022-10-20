@@ -1,4 +1,3 @@
-import { TextField } from '@mui/material';
 import React, { useRef, useState } from 'react'
 import { BiEnvelopeOpen, BiSend } from 'react-icons/bi'
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaPhone, FaPhoneAlt } from "react-icons/fa";
@@ -21,14 +20,19 @@ const Contact: React.FC = () => {
       console.log(data);
       
       setIsSending(true)
-      const res = await emailjs.send("service_mh0anqu","template_7swvlxh",{
-        from_name: data.name,
-        to_name: "Charles",
-        message: data.message,
-        // from_email: data.email,
-        // subject: data.title,
-        reply_to: data.email
-        }, import.meta.env.VITE_PUB_KEY);
+      const res = await emailjs.send(
+				"service_mh0anqu",
+				"template_7swvlxh",
+				{
+					from_name: data.name,
+					to_name: "Charles",
+					message: data.message,
+					// from_email: data.email,
+					// subject: data.title,
+					reply_to: data.email,
+				},
+				process.env.NEXT_PUBLIC_KEY
+			);
         console.log(res);
       setData({})
       setWarn(false)
@@ -40,7 +44,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id='contact' className={`flex flex-col mt-4 tablet:w-4/5 mx-auto ${themeClass.bg}`}>
+    <div id='contact' className={`flex flex-col mt-4 tablet:w-4/5 mx-auto`}>
       <h1 className='text-center text-2xl font-bold'>Contact Me</h1>
       <div className="grid laptop:grid-cols-3 mx-auto w-full md:grid-cols-2 mt-4 flex-wrap">
         <div className="flex items-center p-3 ">

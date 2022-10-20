@@ -24,18 +24,15 @@ I am a person who is interested in learning new things and making things as simp
 
 ## 🔭 I'm currently working on
 
-- Java, C++ projects
-- [Oneplay](https://github.com/NdungutseCharles103/oneplay).
+- Photo Corner
+- [Photo-Corner_RN](https://github.com/NdungutseCharles103/Photo_Corner_RN).
 - Coolstufs
-- Taskero
-- Movies250_RN
+- COLOR
 
 ## 🌱 I'm currently learning
 
 - 📱 React Native
-- Flutter
-- Electron
-- C++
+- Laravel
 - Java
 - C#
 - 📫 How to reach me: ndungutsecharles103@gmail.com
