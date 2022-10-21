@@ -7,11 +7,6 @@
 
 # testing
 /coverage
-/sanitystudio/*
-/sanitystudio
-*/sanitystudio
-/sanity/*
-/studio
 # next.js
 /.next/
 /out/
@@ -22,7 +17,7 @@
 # misc
 .DS_Store
 *.pem
-
+*/dist
 # debug
 npm-debug.log*
 yarn-debug.log*
