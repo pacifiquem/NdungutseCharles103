@@ -46,7 +46,7 @@ const Home: React.FC = () => {
 							className="flex items-center mt-5 pl-6"
 							href="https://github.com/NdungutseCharles103"
 							target="_blank"
-							rel="no-referrer"
+							rel="noreferrer"
 						>
 							<div
 								className="flex items-center bg-blue-800 rounded-full
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
 							className="flex items-center mt-5 pl-6"
 							href="https://www.facebook.com/ishimwendungutsecharles"
 							target="_blank"
-							rel="no-referrer"
+							rel="noreferrer"
 						>
 							<div
 								className="flex items-center bg-blue-800 rounded-full
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
 							className="flex items-center mt-5 pl-6"
 							href="https://www.instagram.com/ndungutse_charles/"
 							target="_blank"
-							rel="no-referrer"
+							rel="noreferrer"
 						>
 							<div
 								className="flex items-center bg-blue-800 rounded-full
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
 							className="flex items-center mt-5 pl-6"
 							href="mailto:ndungutsecharles103@gmail.com"
 							target="_blank"
-							rel="no-referrer"
+							rel="noreferrer"
 						>
 							<div
 								className="flex items-center bg-blue-800 rounded-full
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
 							className="flex items-center mt-5 pl-6"
 							href="tel:+250790077264"
 							target="_blank"
-							rel="no-referrer"
+							rel="noreferrer"
 						>
 							<div
 								className="flex items-center bg-blue-800 rounded-full

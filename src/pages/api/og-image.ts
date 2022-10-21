@@ -8,7 +8,7 @@ interface QueryParams {
 export default withOGImage<'query', QueryParams>({
     template: {
         // include HTML template here
-        html: ({ name, stage }) => `<h1>${name} - ${stage}</h1>`,
+        html: ({ name, stage }: any) => `<h1>${name} - ${stage}</h1>`,
     },
     cacheControl: 'public, max-age=604800, immutable',
     dev: {
