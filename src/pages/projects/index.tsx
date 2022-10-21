@@ -2,6 +2,7 @@ import { AnimationControls, motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Layout from "../../components/Layout";
+import LinearLoader from "../../components/LinearLoader";
 import Navbar from "../../components/Navbar";
 import WorkSlider from "../../components/WorkSlider";
 import { Does } from "../../contexts/data";
@@ -11,35 +12,42 @@ import Projects from "../../sections/Projects";
 const ProjectIndex = () => {
 	const [works, setWorks] = useState<any>([]);
 	const [allShown, setAllShown] = useState<boolean>(false);
+	const [linear, setLinear] = useState<boolean>(false);
 
 	useEffect(() => {
 		setWorks(Does.slice(0, 4));
 	}, []);
 
 	return (
-		<Layout>
-			<div
-				id="projects"
-				className="flex pt-7 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col"
-			>
-				<h2 className="font-bold text-center text-2xl">My Recent Works</h2>
-				<div className=" grid xtab:grid-cols-3 tablet:grid-cols-2 desktop:grid-cols-4 w-full">
-					{works.map((work: any, index: number) => (
-						<Work work={work} key={index} no={index} />
-					))}
+		<>
+			{linear && <LinearLoader />}
+			<Layout setLinear={setLinear}>
+				<div
+					id="projects"
+					className="flex pt-7 bg-gradient-to-b from-slate-100 via-slate-100 to-white w-full flex-col"
+				>
+					<h2 className="font-bold text-center text-2xl">My Recent Works</h2>
+					<div className=" grid xtab:grid-cols-3 tablet:grid-cols-2 desktop:grid-cols-4 w-full">
+						{works.map((work: any, index: number) => (
+							<Work work={work} key={index} no={index} />
+						))}
+					</div>
+					<div className="flex items-center justify-center mt-4">
+						<p
+							onClick={() => {
+								// setAllShown(true)
+								setWorks(Does);
+							}}
+							className="flex cursor-pointer items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300"
+						>
+							Show All Works
+							<span className="text-2xl ml-2">&rarr;</span>
+						</p>
+					</div>
+					{allShown && <WorkSlider works={works} />}
 				</div>
-				<div className="flex items-center justify-center mt-4">
-					<p
-						onClick={() => setAllShown(true)}
-						className="flex cursor-pointer items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300"
-					>
-						Show All Works
-						<span className="text-2xl ml-2">&rarr;</span>
-					</p>
-				</div>
-				{allShown && <WorkSlider works={works} />}
-			</div>
-		</Layout>
+			</Layout>
+		</>
 	);
 };
 

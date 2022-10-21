@@ -25,7 +25,10 @@ const Projects = () => {
 			</div>
 			<div className="flex items-center justify-center mt-4">
 				<p
-					onClick={() => setAllShown(true)}
+					onClick={() => {
+						// setAllShown(true)
+						setWorks(Does);
+					}}
 					className="flex cursor-pointer items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300"
 				>
 					Show All Works

@@ -8,17 +8,18 @@ import Navbar from "./Navbar";
 type LProps = {
     children: React.ReactNode;
     title?: string;
+	setLinear: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Layout: React.FC<LProps> = ({children, title}) => {
+const Layout: React.FC<LProps> = ({children, title, setLinear}) => {
     const { themeClass } = useApp();
 	return (
 		<>
 			<Head>
-                {}
+                <link rel="shortcut icon" href="default.svg" type="image/x-icon" />
             </Head>
 			<div className="w-full flex flex-col">
-				<Navbar />
+				<Navbar setLinear={setLinear} />
 				{children}
 				<div className={`flex flex-col ${themeClass.bg}`}>
 					<Contact />

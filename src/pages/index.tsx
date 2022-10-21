@@ -10,10 +10,12 @@ import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 import { useApp } from "../contexts/AppContext";
 import Layout from "../components/Layout";
+import LinearLoader from "../components/LinearLoader";
 
 function App() {
 	const [showArr, setShowArr] = useState(false);
 	const { themeClass } = useApp();
+	const [linear, setLinear] = useState(false);
 
 	const goToTop = () => {
 		window.scrollTo({ top: 0 });
@@ -32,7 +34,8 @@ function App() {
 
 	return (
 		<>
-			<Layout>
+			{linear && <LinearLoader />}
+			<Layout setLinear={setLinear}>
 				<Home />
 				{showArr && (
 					<FaArrowUp

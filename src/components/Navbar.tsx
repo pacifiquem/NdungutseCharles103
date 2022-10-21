@@ -3,10 +3,19 @@ import React, { useState } from "react";
 import { BiMenu, BiSun } from "react-icons/bi";
 import { useApp } from "../contexts/AppContext";
 
-const Navbar: React.FC = () => {
+type Props = {
+	setLinear: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<Props> = ({ setLinear }) => {
 	const { isDark, setIsDark, themeClass, mobile, setMobile } = useApp();
 	const mobileHan: any = () => {
 		setMobile(false);
+	};
+
+	const handleNavClick = () => {
+		setMobile(!mobile);
+		setLinear(true);
 	};
 
 	return (
@@ -17,7 +26,7 @@ const Navbar: React.FC = () => {
 		>
 			{mobile && (
 				<div
-					onClick={() => setMobile(false)}
+					onClick={handleNavClick}
 					className="absolute top-0 left-0 w-full h-screen z-[3]"
 				></div>
 			)}
@@ -27,7 +36,7 @@ const Navbar: React.FC = () => {
 					className="w-full relative py-2 flex items-center h-full  px-5 justify-between"
 				>
 					<a
-						onClick={() => setMobile(false)}
+						onClick={handleNavClick}
 						className="aspect-square min-w-[100px] max-h-full z-10"
 						href="#home"
 					>
@@ -44,7 +53,7 @@ const Navbar: React.FC = () => {
 				</div>
 				<div
 					className={`tablet:static z-50 flex flex-col duration-300
-                tablet:flex-row items-center text-lg absolute tablet:py-0 py-4 ${
+                tablet:flex-row items-center text-lg absolute tablet:justify-end tablet:py-0 py-4 ${
 									mobile
 										? `right-0 flex top-[3em] min-w-[200px] max-w-full w-full ${themeClass.nav}`
 										: " right-[-500px] hidde"
@@ -60,7 +69,7 @@ const Navbar: React.FC = () => {
 					</Link>
 					<Link href="/carreer">
 						<p
-							onClick={() => setMobile(false)}
+							onClick={handleNavClick}
 							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Carreer
@@ -68,7 +77,7 @@ const Navbar: React.FC = () => {
 					</Link>
 					<Link href="/projects">
 						<p
-							onClick={() => setMobile(false)}
+							onClick={handleNavClick}
 							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Projects
@@ -76,7 +85,7 @@ const Navbar: React.FC = () => {
 					</Link>
 					<Link href="/contact">
 						<p
-							onClick={() => setMobile(false)}
+							onClick={handleNavClick}
 							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Contact

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../../components/Layout';
+import LinearLoader from '../../components/LinearLoader';
 import Navbar from '../../components/Navbar';
 import { useApp } from '../../contexts/AppContext';
 import Contact from '../../sections/Contact';
@@ -8,11 +9,16 @@ import Skills from '../../sections/Skills';
 
 function CarrerIndex() {
 	const { themeClass } = useApp();
+	const [linear, setLinear] = useState(false);
+
   return (
-		<Layout>
-			<Fields />
-			<Skills />
-		</Layout>
+		<>
+			{linear && <LinearLoader />}
+			<Layout setLinear={setLinear}>
+				<Fields />
+				<Skills />
+			</Layout>
+		</>
 	);
 }
 

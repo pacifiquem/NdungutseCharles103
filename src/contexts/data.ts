@@ -6,6 +6,8 @@ const im5 ="/images/photorect.png";
 const im6 ="/images/allfoot.png";
 const im7 ="/images/movies.png";
 const im8 ="/images/infinity.png";
+const im9 ="/images/oneplay.png";
+const im10 ="/images/quizzy.png";
 
 export const Abilities = [
   {
@@ -36,6 +38,18 @@ export const Abilities = [
 ];
 
 export const Does = [
+  {
+    title: "Oneplay",
+    description: "Oneplayer is web media player that allows you to play your favorite music and videos",
+    image: im9,
+    link: "https://oneplay.vercel.app/",
+  },
+  {
+    title: "Quizzy",
+    description: "Take an online quiz and test your knowledge. Quizzy is a web app that allows you to take a quiz and test your knowledge",
+    image: im10,
+    link: "https://quizzy-green.vercel.app/",
+  },
   {
     title: 'All Football',
     link: 'https://allfootball.vercel.app/',
