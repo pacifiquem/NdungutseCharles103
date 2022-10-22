@@ -22,7 +22,7 @@ const projectFields = `
   date,
   `
 
-  export const projectQuery =  `*[_type == "project"] | order(date desc) {
+  export const projectQuery =  `*[_type == "project"] | order(publishedAt desc) {
     ${projectFields} 
   }`
 

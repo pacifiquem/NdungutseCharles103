@@ -18,7 +18,7 @@ const Layout: React.FC<LProps> = ({children, title, setLinear}) => {
 			<Head>
                 <link rel="shortcut icon" href="default.svg" type="image/x-icon" />
             </Head>
-			<div className="w-full flex flex-col">
+			<div className="w-full flex flex-col min-h-screen justify-between">
 				<Navbar setLinear={setLinear} />
 				{children}
 				<div className={`flex flex-col ${themeClass.bg}`}>

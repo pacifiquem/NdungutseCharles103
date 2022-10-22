@@ -1,22 +1,27 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Layout from "../../components/Layout";
 import LinearLoader from "../../components/LinearLoader";
-import Navbar from "../../components/Navbar";
 import WorkSlider from "../../components/WorkSlider";
-import { Does } from "../../contexts/data";
-import Contact from "../../sections/Contact";
-import Projects from "../../sections/Projects";
+import { sanityClient } from "../../lib/sanity.server";
+import { projectQuery } from "../../lib/queries";
+import { ProjectType } from "../../lib/types";
+import { urlForImage } from "../../lib/sanity";
 
-const ProjectIndex = () => {
+type Props = {
+	projects: ProjectType[];
+};
+
+const ProjectIndex = ({ projects }: Props) => {
 	const [works, setWorks] = useState<any>([]);
 	const [allShown, setAllShown] = useState<boolean>(false);
 	const [linear, setLinear] = useState<boolean>(false);
 
 	useEffect(() => {
-		setWorks(Does.slice(0, 4));
-	}, []);
+		setWorks(projects.slice(0, 4));
+	}, [projects]);
 
 	return (
 		<>
@@ -36,7 +41,7 @@ const ProjectIndex = () => {
 						<p
 							onClick={() => {
 								// setAllShown(true)
-								setWorks(Does);
+								setWorks(projects);
 							}}
 							className="flex cursor-pointer items-center text-white px-3 py-1 bg-blue-800 hover:bg-blue-700 duration-300"
 						>
@@ -79,7 +84,7 @@ const Work = ({ no, work }: any) => {
 	return (
 		<div
 			className={` flex flex-col border-[1px]
-      border-slate-200 shadow-md items-center p-[4%] gap-x-8 justify-center mt-[3vh] w-[80%] mx-auto`}
+      border-slate-200 shadow-md items-center p-[4%] gap-x-8  mt-[3vh] w-[80%] mx-auto`}
 		>
 			<motion.div
 				ref={proref}
@@ -88,7 +93,13 @@ const Work = ({ no, work }: any) => {
 				initial="before"
 				className=" overflow-hidden"
 			>
-				<img src={work.image} alt="" />
+				<Image
+					src={urlForImage(work.mainImage).url() || ""}
+					alt=""
+					height={1080}
+					width={1920}
+					className=""
+				/>
 			</motion.div>
 			<motion.div
 				ref={proref}
@@ -112,4 +123,14 @@ const Work = ({ no, work }: any) => {
 			</motion.div>
 		</div>
 	);
+};
+
+export const getServerSideProps = async () => {
+	const projects = await sanityClient.fetch(projectQuery);
+
+	return {
+		props: {
+			projects,
+		},
+	};
 };

@@ -48,12 +48,12 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					</a>
 					<BiMenu
 						onClick={() => setMobile(!mobile)}
-						className="tablet:hidden z-10 block text-3xl cursor-pointer"
+						className="md:hidden z-10 block text-3xl cursor-pointer"
 					/>
 				</div>
 				<div
-					className={`tablet:static z-50 flex flex-col duration-300
-                tablet:flex-row items-center text-lg absolute tablet:justify-end tablet:py-0 py-4 ${
+					className={`md:static z-50 flex flex-col duration-300
+                md:flex-row items-center text-lg absolute md:justify-end md:py-0 py-4 ${
 									mobile
 										? `right-0 flex top-[3em] min-w-[200px] max-w-full w-full ${themeClass.nav}`
 										: " right-[-500px] hidde"
@@ -62,7 +62,7 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					<Link href={`/`}>
 						<p
 							onClick={() => setMobile(!mobile)}
-							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 						 <span className="z-[2] relative">Home</span>
 						</p>
@@ -70,7 +70,7 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					<Link href="/carreer">
 						<p
 							onClick={handleNavClick}
-							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Carreer
 						</p>
@@ -78,7 +78,7 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					<Link href="/projects">
 						<p
 							onClick={handleNavClick}
-							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Projects
 						</p>
@@ -86,12 +86,12 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					<Link href="/contact">
 						<p
 							onClick={handleNavClick}
-							className="tablet:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
 						>
 							Contact
 						</p>
 					</Link>
-					<button className=" from-blue-700 overflow-hidden btnstarted relative to-blue-500 bg-gradient-to-tr truncate py-1 px-4 ml-5 rounded-md text-white">
+					<button className=" from-blue-700 md:mt-0 mt-2 min-w-fit overflow-hidden btnstarted relative to-blue-500 bg-gradient-to-tr truncate py-1 px-4 ml-5 rounded-md text-white">
 						<span className=" relative z-[2]">Download CV </span>
 					</button>
 					{/* <BiSun className='ml-3 cursor-pointer'
