@@ -13,22 +13,19 @@ const Home: React.FC = () => {
 			className={`flex  home bg-gradient-to-b ${themeClass.bg} justify-center flex-col items-center w-full`}
 		>
 			<div
-				className={`px-[10%] grid laptop:grid-cols-2 w-full bg-gradient-to-b 
-			${themeClass.bg} items-center justify-center laptop:h-full  bg-opacity-100`}
+				className={`px-[3%] flex xtab:flex-row flex-col-reverse  w-full bg-gradient-to-b 
+			${themeClass.bg} items-center justify-center  bg-opacity-100`}
 			>
-				<div className="flex px-[5%] laptop:px-0 laptop:aspect-square items-center justify-center">
-					<img className="w-full" src={"/images/code.svg"} alt="" />
-				</div>
-				<div className="flex mx-auto items-center justify-center h-full flex-col laptop:aspect-">
-					<div className="relative ml-4 laptop:w-full h-[7vh] tablet:h-[10vh] flex flex-col ">
-						<h2 className="tablet:text-3xl text-center md:text-start  text-lg font-bold">
+				<div className="flex mx-auto xtab:mt-0 mt-7 items-center justify-center h-full flex-col">
+					<div className="relative ml-4 laptop:w-full flex flex-col xtab:items-start items-center">
+						<h2 className="laptop:text-[3em] text-[2.5em] text-center md:text-start  text-lg font-bold leading-[1em]">
 							Hi. I'm Ishimwe Ndungutse Charles
 						</h2>
 						<TypeEffect />
 					</div>
 					<div
-						className="laptop:flex laptop:flex-col tablet:w-full tablet:grid
-					   flex flex-col tablet:grid-cols-2 items-start mt-2 text-blue-600"
+						className="w-full
+					   flex items-start xtab:justify-start justify-center mt-2 text-blue-600"
 					>
 						<a
 							className="flex items-center mt-5 pl-6"
@@ -40,7 +37,6 @@ const Home: React.FC = () => {
 							>
 								<FaLinkedin className="text-xl" />
 							</div>
-							<p className="ml-4 text-lg">Ishimwe Ndungutse Charles</p>
 						</a>
 						<a
 							className="flex items-center mt-5 pl-6"
@@ -54,7 +50,6 @@ const Home: React.FC = () => {
 							>
 								<FaGithubSquare className="text-xl" />
 							</div>
-							<p className="ml-4 text-lg">Ndungutse Charles103</p>
 						</a>
 						<a
 							className="flex items-center mt-5 pl-6"
@@ -68,7 +63,6 @@ const Home: React.FC = () => {
 							>
 								<FaFacebookSquare className="text-xl" />
 							</div>
-							<p className="ml-4">Charles Hazard</p>
 						</a>
 						<a
 							className="flex items-center mt-5 pl-6"
@@ -82,7 +76,6 @@ const Home: React.FC = () => {
 							>
 								<FaInstagramSquare className="text-xl" />
 							</div>
-							<p className="ml-4 text-lg">ndungutse_charles</p>
 						</a>
 						<a
 							className="flex items-center mt-5 pl-6"
@@ -96,23 +89,11 @@ const Home: React.FC = () => {
 							>
 								<BiEnvelopeOpen className="text-xl" />
 							</div>
-							<p className="ml-4 text-lg">ndungutsecharles103@gmail</p>
-						</a>
-						<a
-							className="flex items-center mt-5 pl-6"
-							href="tel:+250790077264"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<div
-								className="flex items-center bg-blue-800 rounded-full
-          				 	text-white justify-center p-2"
-							>
-								<FaPhoneAlt className="text-xl" />
-							</div>
-							<p className="ml-4 text-lg">+250 790077264</p>
 						</a>
 					</div>
+				</div>
+				<div className="flex px-[5%] laptop:px-0 laptop:aspect-square items-center justify-center">
+					<img className="xtab:w-full w-4/5" src={"/images/code.svg"} alt="" />
 				</div>
 			</div>
 		</div>

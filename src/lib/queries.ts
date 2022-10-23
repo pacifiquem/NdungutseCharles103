@@ -16,7 +16,7 @@ const projectFields = `
   description,
   "slug": slug.current,
   github,
-  url,
+  link,
   mainImage,
   tags,
   date,
@@ -26,10 +26,9 @@ const projectFields = `
     ${projectFields} 
   }`
 
-export const indexQuery = `
-*[_type == "post"] | order(date desc, _updatedAt desc) {
-  ${postFields}
-}`
+export const indexQuery = `*[_type == "project"] | order(publishedAt desc) {
+    ${projectFields} 
+  }`
 
 export const postQuery = `
 {

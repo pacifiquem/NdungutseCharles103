@@ -4,8 +4,11 @@ import { FaArrowUp } from "react-icons/fa";
 import { useApp } from "../contexts/AppContext";
 import Layout from "../components/Layout";
 import LinearLoader from "../components/LinearLoader";
+import RecentActivity from "../components/home/RecentActivity";
+import { sanityClient } from "../lib/sanity.server";
+import { indexQuery } from "../lib/queries";
 
-function App() {
+function App({ recent }: any) {
 	const [showArr, setShowArr] = useState(false);
 	const { themeClass } = useApp();
 	const [linear, setLinear] = useState(false);
@@ -30,6 +33,7 @@ function App() {
 			{linear && <LinearLoader />}
 			<Layout setLinear={setLinear}>
 				<Home />
+				<RecentActivity recent={recent} setLinear={setLinear} />
 				{showArr && (
 					<FaArrowUp
 						onClick={goToTop}
@@ -41,4 +45,13 @@ function App() {
 		</>
 	);
 }
+
+export const getStaticProps = async () => {
+	const recent = await sanityClient.fetch(indexQuery);
+
+	return {
+		props: { recent },
+		revalidate: process.env.SANITY_REVALIDATE_SECRET ? undefined : 60,
+	};
+};
 export default App;

@@ -1,22 +1,36 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { BiMenu, BiSun } from "react-icons/bi";
 import { useApp } from "../contexts/AppContext";
 
 type Props = {
 	setLinear: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const Navbar: React.FC<Props> = ({ setLinear }) => {
 	const { isDark, setIsDark, themeClass, mobile, setMobile } = useApp();
+	const router = useRouter();
 	const mobileHan: any = () => {
 		setMobile(false);
 	};
 
-	const handleNavClick = () => {
+	const handleNavClick = (path: string) => {
 		setMobile(!mobile);
-		setLinear(true);
+		if (path !== router.pathname) {
+			setLinear(true);
+			router.push(path);
+		}
 	};
+
+	if(typeof window === 'object'){
+		console.log(typeof window);
+		window.addEventListener('resize', ()=>{
+			if(window.innerWidth > 750){
+				setMobile(false);
+			}
+		})
+	}
 
 	return (
 		<div
@@ -26,7 +40,7 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 		>
 			{mobile && (
 				<div
-					onClick={handleNavClick}
+					onClick={() => setMobile(!mobile)}
 					className="absolute top-0 left-0 w-full h-screen z-[3]"
 				></div>
 			)}
@@ -35,17 +49,16 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					onClick={mobile ? mobileHan : () => {}}
 					className="w-full relative py-2 flex items-center h-full  px-5 justify-between"
 				>
-					<a
-						onClick={handleNavClick}
-						className="aspect-square min-w-[100px] max-h-full z-10"
-						href="#home"
+					<p
+						onClick={() => handleNavClick("/")}
+						className="aspect-square min-w-[100px] max-h-full z-10 cursor-pointer"
 					>
 						<img
 							className="aspect-square max-h-full"
 							src={"/images/logo.png"}
 							alt="charles"
 						/>
-					</a>
+					</p>
 					<BiMenu
 						onClick={() => setMobile(!mobile)}
 						className="md:hidden z-10 block text-3xl cursor-pointer"
@@ -59,38 +72,30 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 										: " right-[-500px] hidde"
 								}`}
 				>
-					<Link href={`/`}>
-						<p
-							onClick={() => setMobile(!mobile)}
-							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
-						>
-						 <span className="z-[2] relative">Home</span>
-						</p>
-					</Link>
-					<Link href="/carreer">
-						<p
-							onClick={handleNavClick}
-							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
-						>
-							Carreer
-						</p>
-					</Link>
-					<Link href="/projects">
-						<p
-							onClick={handleNavClick}
-							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
-						>
-							Projects
-						</p>
-					</Link>
-					<Link href="/contact">
-						<p
-							onClick={handleNavClick}
-							className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
-						>
-							Contact
-						</p>
-					</Link>
+					<p
+						onClick={() => handleNavClick("/")}
+						className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+					>
+						<span className="z-[2] relative">Home</span>
+					</p>
+					<p
+						onClick={() => handleNavClick("/carreer")}
+						className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+					>
+						Carreer
+					</p>
+					<p
+						onClick={() => handleNavClick("/projects")}
+						className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+					>
+						Projects
+					</p>
+					<p
+						onClick={() => handleNavClick("/contact")}
+						className="md:ml-4 p-2 hover:text-[#0667ef] cursor-pointer navlink relative"
+					>
+						Contact
+					</p>
 					<button className=" from-blue-700 md:mt-0 mt-2 min-w-fit overflow-hidden btnstarted relative to-blue-500 bg-gradient-to-tr truncate py-1 px-4 ml-5 rounded-md text-white">
 						<span className=" relative z-[2]">Download CV </span>
 					</button>

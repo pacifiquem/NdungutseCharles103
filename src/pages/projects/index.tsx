@@ -1,14 +1,11 @@
-import { AnimationControls, motion, useAnimation } from "framer-motion";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import Layout from "../../components/Layout";
 import LinearLoader from "../../components/LinearLoader";
 import WorkSlider from "../../components/WorkSlider";
 import { sanityClient } from "../../lib/sanity.server";
 import { projectQuery } from "../../lib/queries";
 import { ProjectType } from "../../lib/types";
-import { urlForImage } from "../../lib/sanity";
+import Work from "../../components/work";
 
 type Props = {
 	projects: ProjectType[];
@@ -20,7 +17,7 @@ const ProjectIndex = ({ projects }: Props) => {
 	const [linear, setLinear] = useState<boolean>(false);
 
 	useEffect(() => {
-		setWorks(projects.slice(0, 4));
+		setWorks(projects.slice(0, 8));
 	}, [projects]);
 
 	return (
@@ -37,7 +34,7 @@ const ProjectIndex = ({ projects }: Props) => {
 							<Work work={work} key={index} no={index} />
 						))}
 					</div>
-					<div className="flex items-center justify-center mt-4">
+					{works.length > 8 &&<div className="flex items-center justify-center mt-4">
 						<p
 							onClick={() => {
 								// setAllShown(true)
@@ -48,7 +45,7 @@ const ProjectIndex = ({ projects }: Props) => {
 							Show All Works
 							<span className="text-2xl ml-2">&rarr;</span>
 						</p>
-					</div>
+					</div>}
 					{allShown && <WorkSlider works={works} />}
 				</div>
 			</Layout>
@@ -58,79 +55,13 @@ const ProjectIndex = ({ projects }: Props) => {
 
 export default ProjectIndex;
 
-const textVariant = {
-	before: { opacity: 0, x: -40, transition: { duration: 3 } },
-	after: { opacity: 1, x: 0 },
-};
-
-const imgVariant = {
-	before: { opacity: 0, x: 40, transition: { duration: 3 } },
-	after: { opacity: 1, x: 0 },
-};
-
-const Work = ({ no, work }: any) => {
-	const control: AnimationControls = useAnimation();
-	const [proref, inView] = useInView();
-	const [imgVar, setImgVar] = useState<any>(imgVariant);
-	const [textVar, setTextVar] = useState<any>(textVariant);
-
-	useEffect(() => {
-		if (inView) {
-			control.start("after");
-			console.log("pro");
-		}
-	}, [control, inView]);
-
-	return (
-		<div
-			className={` flex flex-col border-[1px]
-      border-slate-200 shadow-md items-center p-[4%] gap-x-8  mt-[3vh] w-[80%] mx-auto`}
-		>
-			<motion.div
-				ref={proref}
-				variants={no % 2 === 0 ? imgVar : textVar}
-				animate={control}
-				initial="before"
-				className=" overflow-hidden"
-			>
-				<Image
-					src={urlForImage(work.mainImage).url() || ""}
-					alt=""
-					height={1080}
-					width={1920}
-					className=""
-				/>
-			</motion.div>
-			<motion.div
-				ref={proref}
-				variants={no % 2 === 0 ? textVar : imgVar}
-				animate={control}
-				initial="before"
-				className="flex items-center mt-2 flex-col"
-			>
-				<h2 className=" text-xl font-bold">{work.title}</h2>
-				<p className="">{work.description}</p>
-				<a
-					href={work.link}
-					target="_blank"
-					rel="noreferrer"
-					className="flex mx-auto  items-center w-[160px] mt-4 text-white px-3 py-1 bg-blue-800
-         justify-center hover:bg-blue-700 duration-300"
-				>
-					Visit Now
-					<p className="text-2xl flex items-center ml-2 my-auto">&rarr;</p>
-				</a>
-			</motion.div>
-		</div>
-	);
-};
-
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	const projects = await sanityClient.fetch(projectQuery);
 
 	return {
 		props: {
 			projects,
 		},
+		revalidate: process.env.SANITY_REVALIDATE_SECRET ? undefined : 60,
 	};
 };

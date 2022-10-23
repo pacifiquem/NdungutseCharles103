@@ -1,4 +1,4 @@
-let productionUrl
+let productionUrl: any
 try {
   productionUrl = new URL(
     process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000'
@@ -7,7 +7,7 @@ try {
   console.error('Invalid productionUrl', err)
 }
 
-export default function resolveProductionUrl(document) {
+export default function resolveProductionUrl(document: any) {
   if (!productionUrl || !document.slug?.current) {
     return false
   }
