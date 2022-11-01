@@ -26,16 +26,18 @@ I am a person who is interested in learning new things and making things as simp
 
 - Photo Corner
 - [Photo-Corner_RN](https://github.com/NdungutseCharles103/Photo_Corner_RN).
-- Coolstufs
-- COLOR
+- Oneplay
+- Taskero
 
 ## 🌱 I'm currently learning
 
 - 📱 React Native
-- Laravel
+- C++
 - Java
 - C#
-- 📫 How to reach me: ndungutsecharles103@gmail.com
+- Electron
+
+#### 📫 How to reach me: ndungutsecharles103@gmail.com
 
 ## 💼 Technical Skills
 ![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
@@ -72,6 +74,6 @@ I am a person who is interested in learning new things and making things as simp
 <div>
   <a href="https://github.com/ndungutsecharles103"></a>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ndungutsecharles103&show_icons=true&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ndungutsecharles103&layout=compact&langs_count=6"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ndungutsecharles103&langs_count=8&layout=compact"/>
   <img height="180em" src="https://activity-graph.herokuapp.com/graph?username=NdungutseCharles103&bg_color=060a39&color=fff&line=00fe&point=7d85db&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)"/>
 </div>

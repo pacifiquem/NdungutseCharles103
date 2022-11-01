@@ -18,14 +18,14 @@ const TypeEffect = () => {
 	}, []);
 
 	return (
-		<h1 className=" md:ml-0 tablet:mt-6 flex items-center md:bottom-0">
-			<p className="text-3xl">I&nbsp;</p>
+		<h1 className=" md:ml-0 tablet:mt-6 flex items-center md:bottom-0 names bg-gradient-to-tr from-blue-700 to-violet-900 font-semibold">
+			<p className="text-3xl font-poppin">I&nbsp;</p>
 			<p
-				className="typewrite text-2xl "
+				className="typewrite text-2xl font-poppin"
 				data-period="1000"
 				data-type='[" am software developer", " am Creative.", " Like to learn new things", " Love to Develop." ]'
 			>
-				<span className="wrap"></span>
+				<span className="wrap font-poppin names"></span>
 			</p>
 			<p className="tablet:text-[1.8em] tablet:translate-y-[-3px] text-blue-900">
 				_

@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AppProvider } from "../contexts/AppContext";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Ndungutse Charles</title>
 			</Head>
 			<Component {...pageProps} />
+			<Analytics />
 		</AppProvider>
 	);
 }

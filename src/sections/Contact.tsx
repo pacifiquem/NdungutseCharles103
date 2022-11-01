@@ -121,8 +121,7 @@ const Contact: React.FC = () => {
           </div>
           <div className='relative w-full duration-500 flex flex-col-reverse px-2 py-1 justify-end'>
             <textarea value={data.message} onChange={(e)=> setData({...data, message: e.target.value})}
-             className=' w-full
-              outline-none z-[1] bg-transparent border-[1px] rounded-[0.3em] border-blue-600 min-w-[200px] py-1 px-2' required/>
+             className=' w-full min-h-[10vh] max-h-[40vh]              outline-none z-[1] bg-transparent border-[1px] rounded-[0.3em] border-blue-600 min-w-[200px] py-1 px-2' required/>
             <label htmlFor="" className={``}>Message:</label>
           </div>
           <div className='w-full px-3'>

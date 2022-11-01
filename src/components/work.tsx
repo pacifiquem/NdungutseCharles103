@@ -2,8 +2,11 @@ import { AnimationControls, useAnimation, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import { urlForImage } from '../lib/sanity';
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image'
+import Image, { ImageLoaderProps } from 'next/image'
 
+const myLoader = ({ src }: ImageLoaderProps) => {
+  return `${src}`
+}
 
 const textVariant = {
 	before: { opacity: 0, x: -40, transition: { duration: 10 } },
@@ -41,6 +44,7 @@ const Work = ({ no, work }: any) => {
 				className=" overflow-hidden"
 			>
 				<Image
+					// loader={myLoader}
 					src={urlForImage(work.mainImage).url() || ""}
 					alt=""
 					height={1080}
@@ -65,7 +69,9 @@ const Work = ({ no, work }: any) => {
          justify-center hover:bg-blue-700 duration-300 cursor-pointer"
 				>
 					Visit Now
-					<p className="text-2xl flex items-center ml-2 my-auto cursor-pointer">&rarr;</p>
+					<p className="text-2xl flex items-center ml-2 my-auto cursor-pointer">
+						&rarr;
+					</p>
 				</a>
 			</motion.div>
 		</div>

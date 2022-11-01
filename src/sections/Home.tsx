@@ -18,14 +18,15 @@ const Home: React.FC = () => {
 			>
 				<div className="flex mx-auto xtab:mt-0 mt-7 items-center justify-center h-full flex-col">
 					<div className="relative ml-4 laptop:w-full flex flex-col xtab:items-start items-center">
-						<h2 className="laptop:text-[3em] text-[2.5em] text-center md:text-start  text-lg font-bold leading-[1em]">
+						<h2 className="laptop:text-[3em] xs:text-[2.5em] text-2xl text-center md:text-start font-bold leading-[1em] font-poppin
+						 bg-gradient-to-tr from-blue-500 to-violet-700 names">
 							Hi. I'm Ishimwe Ndungutse Charles
 						</h2>
 						<TypeEffect />
 					</div>
 					<div
 						className="w-full
-					   flex items-start xtab:justify-start justify-center mt-2 text-blue-600"
+					   flex items-start xtab:justify-start flex-wrap justify-center mt-2 text-blue-600"
 					>
 						<a
 							className="flex items-center mt-5 pl-6"

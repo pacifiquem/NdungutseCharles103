@@ -15,6 +15,12 @@ module.exports = {
 			laptop: "1100px",
 			desktop: "1280px",
 		},
+		fontFamily: {
+			'oxa': ['Oxanium', 'sans-serif'],
+			'roboto': ['Roboto', 'sans-serif'],
+			'rokkit': ['Rokkit', 'sans-serif'],
+			'poppin': ['Poppins', 'sans-serif'],
+		}
 	},
 	plugins: [],
 };
