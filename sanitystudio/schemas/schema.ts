@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blog from './blog'
 import author from './author'
 import project from './project'
+import resource from './resource'
 
 export default createSchema({
   name: 'default',
@@ -14,6 +15,6 @@ export default createSchema({
     project,
     blog,
     author,
+    resource,
   ]),
 })
- 

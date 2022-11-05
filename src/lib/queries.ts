@@ -9,6 +9,13 @@ const postFields = `
   "author": author->{name, picture},
 `
 
+const resourceFields = `
+  _id,
+  title,
+  description,
+  file,
+`
+
 const projectFields = `
   _id,
   name,
@@ -23,7 +30,13 @@ const projectFields = `
   `
 
   export const projectQuery =  `*[_type == "project"] | order(publishedAt desc) {
-    ${projectFields} 
+    title,
+    description,
+    
+  }`
+
+  const DownloadFileQuery = `*[_type == "resources"] | order(publishedAt desc) {
+    ${resourceFields}
   }`
 
 export const indexQuery = `*[_type == "project"] | order(publishedAt desc) {

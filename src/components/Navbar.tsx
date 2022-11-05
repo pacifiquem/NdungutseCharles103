@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { BiMenu, BiSun } from "react-icons/bi";
 import { useApp } from "../contexts/AppContext";
+import { sanityClient } from "../lib/sanity.server";
 
 type Props = {
 	setLinear: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,6 +12,7 @@ type Props = {
 const Navbar: React.FC<Props> = ({ setLinear }) => {
 	const { isDark, setIsDark, themeClass, mobile, setMobile } = useApp();
 	const router = useRouter();
+	const [resumeUrl, setResumeUrl] = useState("");
 	const mobileHan: any = () => {
 		setMobile(false);
 	};
@@ -23,14 +25,34 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 		}
 	};
 
-	if(typeof window === 'object'){
+	if (typeof window === "object") {
 		console.log(typeof window);
-		window.addEventListener('resize', ()=>{
-			if(window.innerWidth > 750){
+		window.addEventListener("resize", () => {
+			if (window.innerWidth > 750) {
 				setMobile(false);
 			}
-		})
+		});
 	}
+
+	const getResume = async () => {
+		setLinear(true);
+		let url = resumeUrl;
+		if (url==='') {
+			const res = await sanityClient.fetch(
+				`*[_type == "resources" && title=="Resume"]{
+				file{asset->{url}}
+			}`
+			);
+			setResumeUrl(res[0].file.asset.url);
+			url = res[0].file.asset.url;
+		}
+		setLinear(false);
+		window.open(url, "_blank");
+	};
+
+	// useMemo(() => {
+	// 	getResume();
+	// }, []);
 
 	return (
 		<div
@@ -96,7 +118,10 @@ const Navbar: React.FC<Props> = ({ setLinear }) => {
 					>
 						Contact
 					</p>
-					<button className=" from-blue-700 md:mt-0 mt-2 min-w-fit overflow-hidden btnstarted relative to-blue-500 bg-gradient-to-tr truncate py-1 px-4 ml-5 rounded-md text-white">
+					<button
+						onClick={getResume}
+						className=" from-blue-700 md:mt-0 mt-2 min-w-fit overflow-hidden btnstarted relative to-blue-500 bg-gradient-to-tr truncate py-1 px-4 ml-5 rounded-md text-white"
+					>
 						<span className=" relative z-[2]">Download CV </span>
 					</button>
 					{/* <BiSun className='ml-3 cursor-pointer'
